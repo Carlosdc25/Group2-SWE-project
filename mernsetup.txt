@@ -1,0 +1,19 @@
+MERN Environment Setup
+Resources used: https://www.mongodb.com/resources/languages/mern-stack-tutorial
+
+1. Download Node.js (LTS) v20.18.0 https://nodejs.org/en/
+2. cd server and install dependencies
+npm install
+3. create file server/config.env
+inside file, write your username and password for GATORSONTRACK mongodb in the ATLAS_URI variable
+
+ATLAS_URI=mongodb+srv://<username>:<password>@habittracker.rqunt.mongodb.net/?retryWrites=true&w=majority&appName=habittracker
+PORT=5050
+
+4. to start the server, cd server
+npm start
+5. cd client and install dependencies
+npm install
+6. to start the client, cd client
+npm run dev
+
