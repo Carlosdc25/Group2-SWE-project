@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c6def1;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10%;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Gravitas One', sans-serif;
+}
+
+.text {
+    text-align: left;
+    margin-top: 0; /* Remove top margin */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+.task-text {
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    padding-left: 15px;
+}
+
+.dashboard-container {
+    display: flex; /* Set to flex to align boxes horizontally */
+    justify-content: space-around; /* Space out boxes evenly */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+}
+
+.box {
+    width: 300px;
+    border-radius: 0px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box-title {
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.box-content {
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    padding: 2px;
+    background-color: white; /* White inner section */
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
