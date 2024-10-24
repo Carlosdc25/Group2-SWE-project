@@ -1,0 +1,30 @@
+{
+  "username": "testuser",
+  "password": "password",
+  "dailyReminderTime": [8, 50, "PM"],
+  "daysToRemind": ["Wednesday", "Thursday"],
+  "completedDailyHabits": true,
+  "streak": 9,
+  "habits": {
+    "habit1": {
+      "name": "high priority",
+      "uncompleted": ["pay rent"],
+      "completed": ["math exam"]
+    },
+    "habit2": {
+      "name": "academics",
+      "uncompleted": ["math hw", "presentation"],
+      "completed": ["group project"]
+    },
+    "habit3": {
+      "name": "gym",
+      "uncompleted": ["afternoon", "night"],
+      "completed": ["morning"]
+    },
+    "habit4": {
+      "name": "home",
+      "uncompleted": ["mop floors", "laundry"],
+      "completed": ["groceries"]
+    }
+  }
+}
