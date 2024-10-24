@@ -32,12 +32,18 @@ To set up the Habit Tracker project on your local machine, follow these steps:
      npm install
      ```
 
-5. **Start the Development Server**:
+5. **Start the Development Client**:
    - Use the following command to run the application in development mode:
      ```bash
      npm run dev
      ```
 
+5. **Start the Development Server**:
+   - Use the following command to run the application in development mode:
+     ```bash
+     npm start
+     ```
+     
 6. **Access the Application**:
    - Open your web browser and go to `http://localhost:5173` to view the application.
 
