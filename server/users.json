@@ -1,0 +1,5462 @@
+[
+  {
+    "username": "user1",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Tuesday",
+      "Friday",
+      "Sunday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 18,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "math exam",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "laundry",
+          "call mom"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "mop floors",
+          "weights",
+          "lab report"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user2",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Wednesday",
+      "Monday",
+      "Saturday",
+      "Thursday",
+      "Friday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 16,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "math hw",
+          "math exam"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report",
+          "mop floors",
+          "buy groceries"
+        ],
+        "completed": [
+          "pay rent"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "morning",
+          "arms",
+          "laundry"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "study for test",
+          "clean room"
+        ],
+        "completed": [
+          "group project"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user3",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Saturday",
+      "Tuesday",
+      "Monday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "night",
+          "call mom"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "group project",
+          "mop floors"
+        ],
+        "completed": [
+          "study for test",
+          "groceries"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "math exam",
+          "groceries",
+          "group project"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "lab report",
+          "call mom"
+        ],
+        "completed": [
+          "laundry"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user4",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Thursday",
+      "Wednesday",
+      "Sunday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 11,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "buy groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "legs",
+          "presentation",
+          "mop floors"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "laundry",
+          "clean room"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user5",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 6,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "math exam",
+          "math hw"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "math exam"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user6",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Saturday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 20,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "weights",
+          "buy groceries",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": [
+          "finish report",
+          "study for test",
+          "morning",
+          "afternoon"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "morning",
+          "study for test"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user7",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 23,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "lab report",
+          "laundry"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "clean room",
+          "legs",
+          "afternoon"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation",
+          "weights"
+        ],
+        "completed": [
+          "buy groceries",
+          "study for test",
+          "weights",
+          "morning"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "laundry"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user8",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Thursday",
+      "Monday",
+      "Sunday",
+      "Tuesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 26,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "arms",
+          "pay rent"
+        ],
+        "completed": [
+          "arms",
+          "night"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "clean room",
+          "group project"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user9",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Saturday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 17,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "legs",
+          "groceries",
+          "presentation"
+        ],
+        "completed": [
+          "math hw"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "finish report"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user10",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 27,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "group project",
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "laundry",
+          "math exam"
+        ],
+        "completed": [
+          "morning"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "afternoon",
+          "lab report"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user11",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Friday",
+      "Wednesday",
+      "Sunday",
+      "Saturday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 1,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "legs"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": [
+          "math exam",
+          "finish report"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "mop floors"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user12",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Wednesday",
+      "Monday",
+      "Sunday",
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 29,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "math hw",
+          "night"
+        ],
+        "completed": [
+          "group project",
+          "groceries",
+          "morning"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "call mom",
+          "morning",
+          "mop floors",
+          "finish report"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user13",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Sunday",
+      "Friday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 25,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "groceries",
+          "presentation"
+        ],
+        "completed": [
+          "lab report",
+          "buy groceries"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "clean room"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "laundry",
+          "math exam"
+        ],
+        "completed": [
+          "buy groceries",
+          "weights"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user14",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 23,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "math hw"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "clean room",
+          "night"
+        ],
+        "completed": [
+          "weights",
+          "groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation",
+          "legs"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user15",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 2,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "mop floors",
+          "arms",
+          "group project"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "group project"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "morning",
+          "study for test",
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user16",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 4,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "night",
+          "group project"
+        ],
+        "completed": [
+          "groceries",
+          "arms"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": [
+          "call mom",
+          "study for test",
+          "finish report",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "laundry",
+          "buy groceries"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user17",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Friday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 30,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "study for test",
+          "lab report"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "afternoon",
+          "clean room"
+        ],
+        "completed": [
+          "pay rent",
+          "legs"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "presentation",
+          "mop floors"
+        ],
+        "completed": [
+          "groceries",
+          "laundry",
+          "lab report",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "weights",
+          "legs"
+        ],
+        "completed": [
+          "call mom"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user18",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Wednesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 20,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "math hw",
+          "groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "morning",
+          "pay rent"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user19",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 15,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "weights",
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "buy groceries"
+        ],
+        "completed": [
+          "buy groceries",
+          "clean room"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "afternoon",
+          "arms"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "morning"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user20",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 21,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "afternoon",
+          "laundry",
+          "mop floors"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "groceries",
+          "study for test",
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user21",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Saturday",
+      "Thursday",
+      "Monday",
+      "Wednesday",
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 17,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "buy groceries",
+          "group project",
+          "mop floors"
+        ],
+        "completed": [
+          "night",
+          "laundry"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "group project",
+          "laundry",
+          "weights"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": [
+          "groceries",
+          "presentation",
+          "math exam",
+          "afternoon"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user22",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Friday",
+      "Thursday",
+      "Tuesday",
+      "Saturday",
+      "Monday",
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 2,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "study for test",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": [
+          "weights",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "weights"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user23",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Thursday",
+      "Sunday",
+      "Friday",
+      "Wednesday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 11,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "groceries",
+          "weights"
+        ],
+        "completed": [
+          "arms"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": [
+          "weights",
+          "laundry"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "study for test",
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user24",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Sunday",
+      "Tuesday",
+      "Monday",
+      "Saturday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 3,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation",
+          "laundry"
+        ],
+        "completed": [
+          "lab report",
+          "night",
+          "morning"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "math exam",
+          "finish report"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "finish report",
+          "study for test"
+        ],
+        "completed": [
+          "groceries"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "study for test"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user25",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Monday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "study for test",
+          "lab report",
+          "arms"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "study for test"
+        ],
+        "completed": [
+          "morning",
+          "call mom"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user26",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 28,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "night",
+          "buy groceries",
+          "weights"
+        ],
+        "completed": [
+          "groceries",
+          "arms",
+          "legs"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "presentation",
+          "study for test",
+          "legs"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "mop floors",
+          "math hw"
+        ],
+        "completed": [
+          "weights",
+          "clean room",
+          "groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "arms"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user27",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Saturday",
+      "Monday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project",
+          "night",
+          "lab report"
+        ],
+        "completed": [
+          "legs"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "night",
+          "finish report",
+          "mop floors"
+        ],
+        "completed": [
+          "study for test"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "study for test",
+          "call mom"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user28",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 24,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "afternoon"
+        ],
+        "completed": [
+          "presentation",
+          "legs",
+          "buy groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "math hw",
+          "presentation"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "laundry",
+          "groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "morning",
+          "afternoon"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user29",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Thursday",
+      "Monday",
+      "Sunday",
+      "Wednesday",
+      "Tuesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 14,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "buy groceries"
+        ],
+        "completed": [
+          "study for test",
+          "call mom",
+          "math hw"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "study for test",
+          "weights",
+          "finish report"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user30",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Friday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 20,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "legs",
+          "study for test"
+        ],
+        "completed": [
+          "legs",
+          "afternoon",
+          "morning"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": [
+          "call mom",
+          "pay rent"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "afternoon",
+          "night",
+          "pay rent"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user31",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Monday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "groceries",
+          "clean room",
+          "afternoon"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "clean room",
+          "math hw",
+          "legs",
+          "pay rent"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user32",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 8,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "study for test",
+          "clean room",
+          "buy groceries"
+        ],
+        "completed": [
+          "group project",
+          "night",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "math exam",
+          "buy groceries",
+          "afternoon",
+          "weights"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "groceries"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user33",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 7,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "finish report",
+          "afternoon"
+        ],
+        "completed": [
+          "arms",
+          "call mom"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "clean room",
+          "pay rent",
+          "math hw"
+        ],
+        "completed": [
+          "study for test",
+          "call mom"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "presentation",
+          "study for test",
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user34",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Tuesday",
+      "Sunday",
+      "Thursday",
+      "Monday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 3,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": [
+          "afternoon",
+          "group project"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "study for test"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "weights"
+        ],
+        "completed": [
+          "group project",
+          "arms",
+          "math exam"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": [
+          "legs"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user35",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Friday",
+      "Tuesday",
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 21,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "afternoon"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "laundry",
+          "math exam"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user36",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Sunday",
+      "Monday",
+      "Wednesday",
+      "Tuesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 26,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "afternoon",
+          "pay rent"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "study for test"
+        ],
+        "completed": [
+          "presentation",
+          "arms"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "call mom",
+          "presentation",
+          "weights",
+          "study for test"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "math exam",
+          "weights"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user37",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Tuesday",
+      "Monday",
+      "Wednesday",
+      "Saturday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "presentation"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "math hw"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "finish report",
+          "presentation"
+        ],
+        "completed": [
+          "legs"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user38",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Friday",
+      "Wednesday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 29,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "buy groceries",
+          "groceries",
+          "legs"
+        ],
+        "completed": [
+          "afternoon",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "finish report",
+          "groceries",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "weights"
+        ],
+        "completed": [
+          "group project"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user39",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 0,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": [
+          "laundry",
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "pay rent",
+          "math exam"
+        ],
+        "completed": [
+          "mop floors",
+          "groceries"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "arms",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "math hw",
+          "pay rent"
+        ],
+        "completed": [
+          "groceries"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user40",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 29,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "afternoon",
+          "night",
+          "legs"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "arms"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user41",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Saturday",
+      "Tuesday",
+      "Friday",
+      "Sunday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 15,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "legs",
+          "weights",
+          "lab report"
+        ],
+        "completed": [
+          "arms",
+          "pay rent",
+          "morning"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "group project",
+          "arms"
+        ],
+        "completed": [
+          "finish report",
+          "mop floors",
+          "morning"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user42",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Saturday",
+      "Wednesday",
+      "Sunday",
+      "Tuesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 4,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "weights"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "finish report",
+          "lab report",
+          "math hw"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": [
+          "laundry",
+          "group project",
+          "buy groceries",
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "afternoon",
+          "group project"
+        ],
+        "completed": [
+          "study for test"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user43",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 11,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "study for test",
+          "morning"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "buy groceries",
+          "finish report",
+          "groceries"
+        ],
+        "completed": [
+          "buy groceries"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "group project",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user44",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Sunday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 20,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "study for test",
+          "legs",
+          "groceries"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning",
+          "mop floors"
+        ],
+        "completed": [
+          "mop floors",
+          "buy groceries"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "afternoon"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user45",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Wednesday",
+      "Sunday",
+      "Thursday",
+      "Monday",
+      "Saturday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 25,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "weights"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "finish report",
+          "study for test",
+          "presentation"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "mop floors",
+          "weights"
+        ],
+        "completed": [
+          "group project",
+          "morning",
+          "groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "mop floors"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user46",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Sunday",
+      "Wednesday",
+      "Saturday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 13,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "study for test"
+        ],
+        "completed": [
+          "mop floors",
+          "legs",
+          "afternoon"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "math exam",
+          "afternoon",
+          "arms"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "math exam",
+          "afternoon"
+        ],
+        "completed": [
+          "buy groceries",
+          "groceries",
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user47",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Wednesday",
+      "Monday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 25,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "buy groceries"
+        ],
+        "completed": [
+          "lab report",
+          "math hw"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "afternoon",
+          "mop floors"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": [
+          "arms",
+          "math hw",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user48",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 28,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "groceries",
+          "night",
+          "legs"
+        ],
+        "completed": [
+          "clean room",
+          "weights",
+          "math hw"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "mop floors",
+          "lab report"
+        ],
+        "completed": [
+          "buy groceries",
+          "study for test"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "buy groceries",
+          "group project"
+        ],
+        "completed": [
+          "pay rent"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user49",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 15,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user50",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Friday",
+      "Monday",
+      "Saturday",
+      "Tuesday",
+      "Thursday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 30,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project",
+          "groceries",
+          "study for test"
+        ],
+        "completed": [
+          "group project",
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "study for test",
+          "buy groceries",
+          "call mom"
+        ],
+        "completed": [
+          "groceries",
+          "legs"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "study for test"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user51",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Wednesday",
+      "Friday",
+      "Tuesday",
+      "Saturday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 6,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "group project",
+          "morning",
+          "legs"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "afternoon"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "night",
+          "group project"
+        ],
+        "completed": [
+          "call mom",
+          "study for test",
+          "lab report"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user52",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project",
+          "finish report",
+          "groceries"
+        ],
+        "completed": [
+          "groceries",
+          "finish report",
+          "group project"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "night",
+          "math exam"
+        ],
+        "completed": [
+          "group project",
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "study for test"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user53",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 28,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "weights",
+          "mop floors",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "study for test"
+        ],
+        "completed": [
+          "afternoon",
+          "morning"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "math exam",
+          "lab report"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user54",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Wednesday",
+      "Tuesday",
+      "Friday",
+      "Saturday",
+      "Thursday",
+      "Sunday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 17,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "arms"
+        ],
+        "completed": [
+          "clean room",
+          "study for test"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "buy groceries",
+          "math exam",
+          "clean room"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user55",
+    "password": "password",
+    "dailyReminderTime": [
+      12,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 14,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "night",
+          "study for test",
+          "laundry"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "groceries",
+          "weights"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "groceries",
+          "pay rent"
+        ],
+        "completed": [
+          "study for test"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "finish report",
+          "buy groceries"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user56",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Thursday",
+      "Wednesday",
+      "Friday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 10,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "morning",
+          "arms"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "buy groceries",
+          "math hw",
+          "call mom"
+        ],
+        "completed": [
+          "night"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "afternoon",
+          "buy groceries"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user57",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 1,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "laundry",
+          "morning"
+        ],
+        "completed": [
+          "arms",
+          "weights"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "buy groceries"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "weights",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "pay rent",
+          "presentation"
+        ],
+        "completed": [
+          "morning"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user58",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Thursday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 7,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "weights",
+          "lab report"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "morning"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "math hw",
+          "groceries"
+        ],
+        "completed": [
+          "math hw",
+          "arms",
+          "pay rent"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user59",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Monday",
+      "Wednesday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 28,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "call mom",
+          "lab report",
+          "clean room"
+        ],
+        "completed": [
+          "pay rent",
+          "groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "laundry"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "arms"
+        ],
+        "completed": [
+          "arms"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user60",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Friday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 18,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "mop floors",
+          "afternoon",
+          "clean room"
+        ],
+        "completed": [
+          "math exam",
+          "morning",
+          "group project"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": [
+          "afternoon",
+          "clean room",
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": [
+          "pay rent"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user61",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Tuesday",
+      "Sunday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 18,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "study for test",
+          "clean room"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "lab report",
+          "mop floors",
+          "afternoon"
+        ],
+        "completed": [
+          "weights",
+          "group project"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "math hw",
+          "clean room"
+        ],
+        "completed": [
+          "arms"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": [
+          "night"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user62",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Thursday",
+      "Friday",
+      "Wednesday",
+      "Tuesday",
+      "Saturday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 13,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "math hw",
+          "legs"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "presentation",
+          "weights",
+          "math hw"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": [
+          "weights",
+          "math hw",
+          "legs",
+          "morning"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "group project",
+          "presentation"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user63",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Wednesday",
+      "Friday",
+      "Saturday",
+      "Thursday",
+      "Monday",
+      "Sunday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 20,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "morning"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "morning",
+          "afternoon",
+          "legs",
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "study for test"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user64",
+    "password": "password",
+    "dailyReminderTime": [
+      7,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Monday",
+      "Thursday",
+      "Sunday",
+      "Tuesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 23,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "afternoon"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "night",
+          "clean room"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "math exam",
+          "laundry"
+        ],
+        "completed": [
+          "laundry",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user65",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 17,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning",
+          "laundry"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "study for test",
+          "pay rent"
+        ],
+        "completed": [
+          "legs"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "study for test",
+          "legs"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user66",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Monday",
+      "Friday",
+      "Sunday",
+      "Thursday",
+      "Saturday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 17,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "mop floors",
+          "laundry",
+          "groceries"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "mop floors",
+          "group project"
+        ],
+        "completed": [
+          "math exam",
+          "study for test"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user67",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Saturday",
+      "Monday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 25,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "afternoon",
+          "arms",
+          "clean room"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "math hw",
+          "mop floors",
+          "laundry"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "group project"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "groceries"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user68",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 9,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "finish report",
+          "buy groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "groceries",
+          "mop floors",
+          "morning"
+        ],
+        "completed": [
+          "call mom",
+          "finish report"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "finish report",
+          "call mom",
+          "afternoon",
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "lab report",
+          "pay rent"
+        ],
+        "completed": [
+          "mop floors"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user69",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Friday",
+      "Saturday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 4,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "night",
+          "afternoon",
+          "clean room"
+        ],
+        "completed": [
+          "buy groceries",
+          "pay rent",
+          "presentation"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "morning",
+          "math exam"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "afternoon",
+          "groceries"
+        ],
+        "completed": [
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "math exam"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user70",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "pay rent",
+          "buy groceries",
+          "weights"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "afternoon",
+          "presentation"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": [
+          "night"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user71",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Saturday",
+      "Monday",
+      "Tuesday",
+      "Sunday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "weights",
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "math hw",
+          "morning"
+        ],
+        "completed": [
+          "finish report",
+          "mop floors"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "legs",
+          "lab report",
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user72",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Monday",
+      "Saturday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "buy groceries",
+          "mop floors"
+        ],
+        "completed": [
+          "buy groceries",
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "pay rent",
+          "night"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user73",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      30,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 8,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "pay rent",
+          "morning"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "study for test",
+          "call mom"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "groceries"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user74",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 26,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "buy groceries"
+        ],
+        "completed": [
+          "night"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "lab report",
+          "group project"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "mop floors",
+          "morning",
+          "night"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "presentation",
+          "group project"
+        ],
+        "completed": [
+          "afternoon"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user75",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Friday",
+      "Saturday",
+      "Thursday",
+      "Sunday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "math exam",
+          "group project"
+        ],
+        "completed": [
+          "group project"
+        ]
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "weights"
+        ],
+        "completed": [
+          "math exam",
+          "weights",
+          "math hw",
+          "call mom"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "buy groceries",
+          "presentation"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user76",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Saturday",
+      "Sunday",
+      "Friday",
+      "Monday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 28,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "math hw",
+          "lab report"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "call mom",
+          "weights"
+        ],
+        "completed": [
+          "finish report",
+          "clean room"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "math exam"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "night",
+          "math hw"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user77",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 9,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "buy groceries",
+          "presentation"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "weights",
+          "lab report",
+          "pay rent"
+        ],
+        "completed": [
+          "group project"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "lab report",
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "groceries"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user78",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Monday",
+      "Saturday",
+      "Thursday",
+      "Wednesday",
+      "Sunday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 0,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "math exam",
+          "math hw"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "finish report",
+          "presentation"
+        ],
+        "completed": [
+          "mop floors",
+          "night"
+        ]
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "clean room",
+          "math hw"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user79",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      30,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Thursday",
+      "Wednesday",
+      "Saturday",
+      "Monday",
+      "Sunday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 29,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "laundry",
+          "math exam"
+        ],
+        "completed": [
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "presentation",
+          "finish report"
+        ],
+        "completed": [
+          "weights"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user80",
+    "password": "password",
+    "dailyReminderTime": [
+      6,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Monday",
+      "Saturday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 13,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "presentation",
+          "laundry"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": [
+          "groceries",
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "laundry",
+          "afternoon",
+          "math exam"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "arms",
+          "groceries"
+        ],
+        "completed": [
+          "afternoon"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user81",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Sunday",
+      "Thursday",
+      "Saturday",
+      "Monday",
+      "Tuesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 12,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "night",
+          "legs"
+        ],
+        "completed": [
+          "afternoon",
+          "call mom"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "math exam",
+          "legs",
+          "presentation"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "clean room",
+          "lab report"
+        ],
+        "completed": [
+          "weights",
+          "math hw",
+          "night"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user82",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Sunday",
+      "Saturday",
+      "Monday",
+      "Tuesday",
+      "Friday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 7,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project",
+          "night"
+        ],
+        "completed": [
+          "groceries",
+          "night"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "math exam",
+          "math hw"
+        ],
+        "completed": [
+          "night"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": [
+          "call mom",
+          "clean room",
+          "math hw"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "laundry",
+          "call mom"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user83",
+    "password": "password",
+    "dailyReminderTime": [
+      10,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Friday",
+      "Thursday",
+      "Tuesday",
+      "Saturday",
+      "Wednesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 3,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "night",
+          "morning"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user84",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Wednesday",
+      "Tuesday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 6,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "call mom",
+          "study for test",
+          "groceries"
+        ],
+        "completed": [
+          "presentation",
+          "buy groceries"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": [
+          "buy groceries",
+          "study for test"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "legs",
+          "afternoon"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user85",
+    "password": "password",
+    "dailyReminderTime": [
+      3,
+      0,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Thursday",
+      "Sunday",
+      "Friday",
+      "Saturday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 10,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "laundry"
+        ],
+        "completed": [
+          "pay rent"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "call mom",
+          "weights",
+          "math exam"
+        ],
+        "completed": [
+          "study for test",
+          "arms"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "buy groceries",
+          "study for test"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "weights"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user86",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Thursday",
+      "Tuesday",
+      "Sunday",
+      "Monday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 15,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "weights"
+        ],
+        "completed": [
+          "finish report",
+          "math exam"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "legs",
+          "afternoon"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user87",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 18,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "legs"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user88",
+    "password": "password",
+    "dailyReminderTime": [
+      11,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Wednesday",
+      "Sunday",
+      "Tuesday",
+      "Thursday",
+      "Monday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 23,
+    "habits": {
+      "habit1": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning"
+        ],
+        "completed": [
+          "call mom"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [
+          "night",
+          "math hw",
+          "weights"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "arms",
+          "night"
+        ],
+        "completed": [
+          "group project",
+          "arms"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "call mom"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user89",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      15,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 3,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "weights",
+          "groceries"
+        ]
+      },
+      "habit3": {
+        "name": "Home",
+        "uncompleted": [
+          "pay rent",
+          "presentation"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "math exam"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user90",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Tuesday",
+      "Saturday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 22,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report",
+          "math hw"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "math hw",
+          "mop floors"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "clean room"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user91",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Sunday",
+      "Tuesday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 26,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "clean room",
+          "night",
+          "mop floors"
+        ],
+        "completed": [
+          "laundry",
+          "call mom",
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "mop floors"
+        ],
+        "completed": [
+          "math hw"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "group project",
+          "laundry",
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "mop floors",
+          "legs"
+        ],
+        "completed": [
+          "morning"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user92",
+    "password": "password",
+    "dailyReminderTime": [
+      4,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Sunday",
+      "Friday",
+      "Tuesday",
+      "Saturday",
+      "Monday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Home",
+        "uncompleted": [
+          "presentation"
+        ],
+        "completed": [
+          "math exam"
+        ]
+      },
+      "habit3": {
+        "name": "Gym",
+        "uncompleted": [
+          "legs"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "arms"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user93",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      45,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Sunday",
+      "Monday",
+      "Thursday",
+      "Friday",
+      "Tuesday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 24,
+    "habits": {
+      "habit1": {
+        "name": "Gym",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "High Priority",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": [
+          "mop floors",
+          "lab report"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Academics",
+        "uncompleted": [
+          "arms",
+          "morning"
+        ],
+        "completed": [
+          "weights"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user94",
+    "password": "password",
+    "dailyReminderTime": [
+      5,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Monday",
+      "Saturday",
+      "Wednesday",
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 11,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "math exam",
+          "clean room"
+        ],
+        "completed": [
+          "clean room",
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "math exam"
+        ],
+        "completed": [
+          "presentation",
+          "study for test"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "arms"
+        ],
+        "completed": [
+          "afternoon",
+          "arms",
+          "call mom",
+          "mop floors"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [
+          "lab report",
+          "math hw"
+        ],
+        "completed": [
+          "morning"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user95",
+    "password": "password",
+    "dailyReminderTime": [
+      8,
+      45,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Monday",
+      "Tuesday",
+      "Thursday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 15,
+    "habits": {
+      "habit1": {
+        "name": "High Priority",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "weights",
+          "math hw",
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "laundry",
+          "math exam"
+        ],
+        "completed": []
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "morning",
+          "buy groceries"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Home",
+        "uncompleted": [
+          "groceries",
+          "night"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user96",
+    "password": "password",
+    "dailyReminderTime": [
+      9,
+      0,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Saturday",
+      "Tuesday",
+      "Wednesday",
+      "Monday",
+      "Thursday",
+      "Friday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 1,
+    "habits": {
+      "habit1": {
+        "name": "Academics",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": [
+          "night",
+          "legs",
+          "presentation"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "morning",
+          "finish report",
+          "lab report"
+        ],
+        "completed": [
+          "night"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "study for test",
+          "pay rent",
+          "night",
+          "call mom"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "group project",
+          "math hw"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user97",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      15,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Tuesday",
+      "Friday",
+      "Monday",
+      "Sunday",
+      "Thursday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 19,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "groceries",
+          "call mom"
+        ],
+        "completed": [
+          "mop floors",
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Academics",
+        "uncompleted": [],
+        "completed": [
+          "buy groceries",
+          "call mom"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "night"
+        ],
+        "completed": [
+          "presentation",
+          "buy groceries",
+          "afternoon"
+        ]
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [],
+        "completed": [
+          "pay rent"
+        ]
+      }
+    }
+  },
+  {
+    "username": "user98",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Friday",
+      "Sunday"
+    ],
+    "completedDailyHabits": true,
+    "streak": 24,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "morning",
+          "presentation"
+        ],
+        "completed": [
+          "finish report"
+        ]
+      },
+      "habit2": {
+        "name": "Finance",
+        "uncompleted": [],
+        "completed": [
+          "weights"
+        ]
+      },
+      "habit3": {
+        "name": "Academics",
+        "uncompleted": [
+          "study for test",
+          "presentation"
+        ],
+        "completed": []
+      },
+      "habit4": {
+        "name": "Gym",
+        "uncompleted": [
+          "call mom"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user99",
+    "password": "password",
+    "dailyReminderTime": [
+      2,
+      50,
+      "PM"
+    ],
+    "daysToRemind": [
+      "Wednesday",
+      "Friday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 8,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [
+          "math hw"
+        ],
+        "completed": []
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "clean room"
+        ],
+        "completed": [
+          "presentation"
+        ]
+      },
+      "habit3": {
+        "name": "High Priority",
+        "uncompleted": [
+          "group project"
+        ],
+        "completed": [
+          "laundry",
+          "morning",
+          "buy groceries"
+        ]
+      },
+      "habit4": {
+        "name": "Finance",
+        "uncompleted": [
+          "buy groceries",
+          "morning"
+        ],
+        "completed": []
+      }
+    }
+  },
+  {
+    "username": "user100",
+    "password": "password",
+    "dailyReminderTime": [
+      1,
+      50,
+      "AM"
+    ],
+    "daysToRemind": [
+      "Wednesday"
+    ],
+    "completedDailyHabits": false,
+    "streak": 4,
+    "habits": {
+      "habit1": {
+        "name": "Home",
+        "uncompleted": [],
+        "completed": [
+          "buy groceries",
+          "lab report",
+          "mop floors"
+        ]
+      },
+      "habit2": {
+        "name": "Gym",
+        "uncompleted": [
+          "groceries",
+          "morning"
+        ],
+        "completed": [
+          "study for test",
+          "buy groceries"
+        ]
+      },
+      "habit3": {
+        "name": "Finance",
+        "uncompleted": [
+          "pay rent"
+        ],
+        "completed": [
+          "clean room",
+          "math hw",
+          "laundry"
+        ]
+      },
+      "habit4": {
+        "name": "High Priority",
+        "uncompleted": [],
+        "completed": [
+          "morning"
+        ]
+      }
+    }
+  }
+]
