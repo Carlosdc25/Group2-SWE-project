@@ -81,4 +81,23 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// This section will help add a new task
+router.post("/add-task", async (req, res) => {
+  try {
+    const db = await connectDB();
+    const newHabit = {
+      habit: req.body.habit,
+      task: req.body.task,
+    };
+
+    const collection = db.collection("records");
+    const result = await collection.insertOne(newHabit);
+    res.status(201).send(result); // status 201 = created
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error adding task");
+  }
+});
+
 export default router;
+
