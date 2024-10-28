@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './dashboard.component.css';
 
 function Dashboard() {
@@ -6,68 +6,14 @@ function Dashboard() {
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
   const [selectedHabit, setSelectedHabit] = useState('');
   const [task, setTask] = useState('');
-  const [multipleTasks, setMultipleTasks] = useState([]);
-
-  useEffect(() => {
-    getTasks();
-  }, []);
-
-  const getHabitColor = (habit) => {
-    if (habit == 'High Priority'){
-      return '#DBCDF0';
-    }
-    else if (habit == 'Academics'){
-      return '#F7D9C4';
-    }
-    else if (habit == 'Gym'){
-      return '#FAEDCB';
-    }
-    else if (habit == 'Home'){
-      return '#F2C6DE';
-    }
-    else{
-      return '#FF0000';
-    }
-  };
-
-  const getTasks = async () =>{
-    try {
-      const response = await fetch('http://localhost:5050/record');
-      if (response.ok){
-        const data = await response.json();
-        setMultipleTasks(data);
-      }
-      else{
-        console.error('Failed to get tasks for dashboard:(', response.statusText);
-      }
-    }
-    catch(error){
-      console.error('error getting tasks for dashboard', error);
-    }
-  };
-
-
- const tasksByHabit = multipleTasks.reduce((acc, task) => {
-    const habit = task.habit;
-
-    if (!acc[habit]) {
-      acc[habit] = [];
-    }
-    acc[habit].push(task);
-
-    return acc;
-  }, {});
 
   const getGreeting = () => {
     const currentHour = new Date().getHours();
-
     if (currentHour < 12) {
       return 'Good Morning';
-    } 
-    else if (currentHour < 18) {
+    } else if (currentHour < 18) {
       return 'Good Afternoon';
-    } 
-    else {
+    } else {
       return 'Good Evening';
     }
   };
@@ -95,9 +41,7 @@ function Dashboard() {
       habit: selectedHabit,  
       task: task
     };
-    console.log("Selected Habit:", selectedHabit);
-    console.log("Task:", task);
-
+  
     try {
       // Send the data to the backend
       const response = await fetch("http://localhost:5050/record/add-task", {
@@ -107,12 +51,10 @@ function Dashboard() {
         },
         body: JSON.stringify(newTask),  
       });
-      
+  
       if (response.ok) {
         console.log(`Task for ${selectedHabit}: ${task} added successfully!!!`);
-        setTask("");  //clear input
-        setIsDialogOpen(false); //close pop-up
-        getTasks(); //get tasks and place them in multipleTasks
+        setTask("");  // Clear input
       } else {
         console.error("Task adding failue");
       }
@@ -133,36 +75,49 @@ function Dashboard() {
       <p className='text'>Today is {getCurrentDate()}</p>
       <div>
         <img src="https://cdn-icons-png.flaticon.com/512/561/561135.png" alt="Settings Icon" className="settings-icon" />
-      </div>
-      <div><img src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png" alt="Profile Icon" className="profile-icon"/>
-      </div>
-
-       
+        </div>
+        <div><img src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png" alt="Profile Icon" className="profile-icon"/></div>
       <div className="dashboard-container">
         {/* Boxes with tasks */}
-        {/* going over each habit to create boxes dynamically using .map() */}
-        {['High Priority', 'Academics', 'Gym', 'Home'].map((habit) => (
-          <div
-            key={habit}
-            className="box"
-            style={{ backgroundColor: getHabitColor(habit) }}
-          >
-            <div className="box-title">{habit}</div>
-            <div className="box-content">
-              <div>
-                {tasksByHabit[habit] ? (
-                  tasksByHabit[habit].map((taskItem) => (
-                    <p key={taskItem._id} className='task-text'>
-                      <input type="checkbox" /> {taskItem.task}
-                    </p>
-                  ))
-                ) : (
-                  <p>No tasks</p>
-                )}
-              </div>
+        <div className="box" style={{ backgroundColor: '#DBCDF0' }}>
+          <div className="box-title">High Priority</div>
+          <div className="box-content">
+            <div>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" defaultChecked /> Completed Task</p>
+              <p className='task-text'><input type="checkbox" defaultChecked /> Completed Task</p>
             </div>
           </div>
-        ))}
+        </div>
+        <div className="box" style={{ backgroundColor: '#F7D9C4' }}>
+          <div className="box-title">Academics</div>
+          <div className="box-content">
+            <div>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" defaultChecked /> Completed Task</p>
+            </div>
+          </div>
+        </div>
+        <div className="box" style={{ backgroundColor: '#FAEDCB' }}>
+          <div className="box-title">Gym</div>
+          <div className="box-content">
+            <div>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" defaultChecked /> Completed Task</p>
+            </div>
+          </div>
+        </div>
+        <div className="box" style={{ backgroundColor: '#F2C6DE' }}>
+          <div className="box-title">Home</div>
+          <div className="box-content">
+            <div>
+              <p className='task-text'><input type="checkbox" /> Uncompleted Task</p>
+              <p className='task-text'><input type="checkbox" defaultChecked /> Completed Task</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Add Habit Button */}
