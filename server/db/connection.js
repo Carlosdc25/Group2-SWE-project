@@ -23,7 +23,7 @@ async function connectDB() {
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
 
-    db = client.db("employees");
+    db = client.db("users");
     return db;
   } catch (err) {
     console.error(err);
