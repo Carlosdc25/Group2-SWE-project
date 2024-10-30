@@ -80,9 +80,6 @@ function Dashboard() {
   const toggleDialog = () => {
     setIsDialogOpen(!isDialogOpen);
   };
-  const toggleTaskDialog = () =>{
-    setIsTaskDialogOpen(!isTaskDialogOpen);
-  };
   
   const handleHabitClick =(habit) => {
     setSelectedHabit(habit);
@@ -175,36 +172,26 @@ function Dashboard() {
         <div className="dialog">
             <div className="dialog-content">
                 <h2>Choose New Habit</h2>
-                <button className="add-habit" style={{ backgroundColor: '#DBCDF0' }} onClick={() => handleHabitClick('Finance')}>
-                    <div className="habit-title">Finance</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#F7D9C4' }} onClick={() => handleHabitClick('Academics')}>
-                    <div className="habit-title">Academics</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#FAEDCB' }} onClick={() => handleHabitClick('Gym')}>
-                    <div className="habit-title">Gym</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#F2C6DE' }} onClick={() => handleHabitClick('Home')} >
-                    <div className="habit-title">Home</div>
-                </button>
-                <button className="done-button" onClick={toggleDialog}>Done</button>
-            </div>
-        </div>
-      )}
+                {['High Priority', 'Academics', 'Gym', 'Home'].map((habit) => (
+                  <button key={habit} className='add-habit' style= {{backgroundColor : getHabitColor(habit)}} onClick={() => handleHabitClick(habit)}>
+                    <div className="individual-habit-title">
+                      {habit} 
+                    </div>
+                  </button>
+                ))}
+              <input
+                placeholder={`Enter your ${selectedHabit} task`}
+                type="text"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+              />
+              <button className="submit-task-button" onClick={handleTaskSubmit}>
+                Submit Task
+              </button>
+              <button className="done-button" onClick={toggleDialog}>Close</button>
 
-      {/*Task Making Dialog*/}
-      {isTaskDialogOpen && (
-        <div className="adding-task-pop-up"> 
-          <div className="adding-task">
-            <h2>{selectedHabit} -  Add a Task</h2>
-            <input 
-              placeholder={`Enter your ${selectedHabit} task`} 
-              type="text" 
-              value={task} 
-              onChange={(e) => setTask(e.target.value)} 
-            />
-            <button className="submit-task-button" onClick={handleTaskSubmit}>Submit</button>
-          </div>
+               
+            </div>
         </div>
       )}
 
