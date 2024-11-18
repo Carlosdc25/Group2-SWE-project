@@ -26,7 +26,7 @@ export async function registerPushNotifications() {
 
     // Send Push Subscription to the server
     console.log("Sending Push Subscription to the server...");
-    await fetch("http://localhost:3000/subscribe", {
+    await fetch("http://localhost:5050/subscribe", {
       method: "POST",
       body: JSON.stringify(subscription),
       headers: {

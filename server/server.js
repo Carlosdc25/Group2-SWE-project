@@ -50,7 +50,7 @@ app.post("/subscribe", (req, res) => {
   const push = new PushNotifications(settings);
 
   // Create payload
-  const payload = { title: "Notification from Knock" };
+  const payload = { title: "Notification from Gators on Track" };
   
   push.send(subscription, payload, (err, result) => {
     if (err) {
