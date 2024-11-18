@@ -1,11 +1,64 @@
 import React, { useState } from 'react';
 import './dashboard.component.css';
+import SettingsDialog from '../settings/settings.component';
 
 function Dashboard() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
   const [selectedHabit, setSelectedHabit] = useState('');
   const [task, setTask] = useState('');
+  const [multipleTasks, setMultipleTasks] = useState([]);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  useEffect(() => {
+    getTasks();
+  }, []);
+ 
+  const getHabitColor = (habit) => {
+    if (habit == 'High Priority'){
+      return '#DBCDF0';
+    }
+    else if (habit == 'Academics'){
+      return '#F7D9C4';
+    }
+    else if (habit == 'Gym'){
+      return '#FAEDCB';
+    }
+    else if (habit == 'Home'){
+      return '#F2C6DE';
+    }
+    else{
+      return '#FF0000';
+    }
+  };
+
+  const getTasks = async () =>{
+    try {
+      const response = await fetch('http://localhost:5050/record');
+      if (response.ok){
+        const data = await response.json();
+        setMultipleTasks(data);
+      }
+      else{
+        console.error('Failed to get tasks for dashboard:(', response.statusText);
+      }
+    }
+    catch(error){
+      console.error('error getting tasks for dashboard', error);
+    }
+  };
+
+
+ const tasksByHabit = multipleTasks.reduce((acc, task) => {
+    const habit = task.habit;
+
+    if (!acc[habit]) {
+      acc[habit] = [];
+    }
+    acc[habit].push(task);
+
+    return acc;
+  }, {});
 
   const getGreeting = () => {
     const currentHour = new Date().getHours();
@@ -25,9 +78,6 @@ function Dashboard() {
 
   const toggleDialog = () => {
     setIsDialogOpen(!isDialogOpen);
-  };
-  const toggleTaskDialog = () =>{
-    setIsTaskDialogOpen(!isTaskDialogOpen);
   };
   
   const handleHabitClick =(habit) => {
@@ -67,13 +117,17 @@ function Dashboard() {
   
   };
 
+  const toggleSettings = () =>{
+    setIsSettingsOpen(!isSettingsOpen);
+  };
+
   return (
     <div>
       <div className="header">
         {getGreeting()}, Alexa       
       </div>
       <p className='text'>Today is {getCurrentDate()}</p>
-      <div>
+      <div onClick={toggleSettings}>
         <img src="https://cdn-icons-png.flaticon.com/512/561/561135.png" alt="Settings Icon" className="settings-icon" />
         </div>
         <div><img src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png" alt="Profile Icon" className="profile-icon"/></div>
@@ -130,39 +184,31 @@ function Dashboard() {
         <div className="dialog">
             <div className="dialog-content">
                 <h2>Choose New Habit</h2>
-                <button className="add-habit" style={{ backgroundColor: '#DBCDF0' }} onClick={() => handleHabitClick('Finance')}>
-                    <div className="habit-title">Finance</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#F7D9C4' }} onClick={() => handleHabitClick('Academics')}>
-                    <div className="habit-title">Academics</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#FAEDCB' }} onClick={() => handleHabitClick('Gym')}>
-                    <div className="habit-title">Gym</div>
-                </button>
-                <button className="add-habit" style={{ backgroundColor: '#F2C6DE' }} onClick={() => handleHabitClick('Home')} >
-                    <div className="habit-title">Home</div>
-                </button>
-                <button className="done-button" onClick={toggleDialog}>Done</button>
+                {['High Priority', 'Academics', 'Gym', 'Home'].map((habit) => (
+                  <button key={habit} className='add-habit' style= {{backgroundColor : getHabitColor(habit)}} onClick={() => handleHabitClick(habit)}>
+                    <div className="individual-habit-title">
+                      {habit} 
+                    </div>
+                  </button>
+                ))}
+              <input
+                placeholder={`Enter your ${selectedHabit} task`}
+                type="text"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+              />
+              <button className="submit-task-button" onClick={handleTaskSubmit}>
+                Submit Task
+              </button>
+              <button className="done-button" onClick={toggleDialog}>Close</button>
+
+               
             </div>
         </div>
       )}
-
-      {/*Task Making Dialog*/}
-      {isTaskDialogOpen && (
-        <div className="adding-task-pop-up"> 
-          <div className="adding-task">
-            <h2>{selectedHabit} -  Add a Task</h2>
-            <input 
-              placeholder={`Enter your ${selectedHabit} task`} 
-              type="text" 
-              value={task} 
-              onChange={(e) => setTask(e.target.value)} 
-            />
-            <button className="submit-task-button" onClick={handleTaskSubmit}>Submit</button>
-          </div>
-        </div>
+      {isSettingsOpen && (
+        <SettingsDialog onClose={toggleSettings} /> 
       )}
-
     </div>
   );
 }
