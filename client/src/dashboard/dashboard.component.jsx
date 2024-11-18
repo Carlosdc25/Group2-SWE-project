@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './dashboard.component.css';
+import SettingsDialog from '../settings/settings.component';
 
 function Dashboard() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -7,11 +8,12 @@ function Dashboard() {
   const [selectedHabit, setSelectedHabit] = useState('');
   const [task, setTask] = useState('');
   const [multipleTasks, setMultipleTasks] = useState([]);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   useEffect(() => {
     getTasks();
   }, []);
-
+ 
   const getHabitColor = (habit) => {
     if (habit == 'High Priority'){
       return '#DBCDF0';
@@ -122,13 +124,17 @@ function Dashboard() {
   
   };
 
+  const toggleSettings = () =>{
+    setIsSettingsOpen(!isSettingsOpen);
+  };
+
   return (
     <div>
       <div className="header">
         {getGreeting()}, Alexa       
       </div>
       <p className='text'>Today is {getCurrentDate()}</p>
-      <div>
+      <div onClick={toggleSettings}>
         <img src="https://cdn-icons-png.flaticon.com/512/561/561135.png" alt="Settings Icon" className="settings-icon" />
       </div>
       <div><img src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png" alt="Profile Icon" className="profile-icon"/>
@@ -194,7 +200,9 @@ function Dashboard() {
             </div>
         </div>
       )}
-
+      {isSettingsOpen && (
+        <SettingsDialog onClose={toggleSettings} /> 
+      )}
     </div>
   );
 }
