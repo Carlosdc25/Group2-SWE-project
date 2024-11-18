@@ -5,7 +5,19 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-// Initial route for testing
+router.get("/", async (req, res) => {
+  try {
+    const db = await connectDB();
+    const collection = db.collection("records");
+    const tasks = await collection.find({}).toArray();
+    res.status(200).json(tasks);
+  } catch (err) {
+    console.error("Error retrieving tasks:", err);
+    res.status(500).send("Error retrieving tasks");
+  }
+});
+
+//Initial route for testing
 router.get("/", (req, res) => {
   res.send("GET all user information!");
 });
@@ -106,15 +118,18 @@ router.post("/add-task", async (req, res) => {
       habit: req.body.habit,
       task: req.body.task,
     };
-    const collection = db.collection("userinfo");
+    console.log("New Habit Document:", newHabit);
+    const collection = db.collection("records");
     const result = await collection.insertOne(newHabit);
-    res.status(201).send(result);
+    const insertedTask = await collection.findOne({ _id: result.insertedId });
+
+    res.status(201).send(insertedTask);
   } catch (err) {
     console.error("Error adding task:", err);
     res.status(500).send("Error adding task");
   }
 });
 
+
+
 export default router;
-
-
