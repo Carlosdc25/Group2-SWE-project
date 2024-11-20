@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c6def1;
+ }
+ 
+ 
+ /* General container styling */
+ .profile-container {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ /* Grid layout */
+ .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+ .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.acc-header {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Gravitas One', sans-serif;
+    margin: 0;
+}
+ 
+ .habit-title {
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+ }
+ 
+ 
+ .chosen-habits {
+    grid-column: 1 / 2; /* First column */
+ }
+ 
+ 
+ .reminders {
+    grid-column: 2 / 2; /* Second column */
+ }
+ 
+ /* Box styling */
+ .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+ 
+ 
+ /* Habit boxes */
+ .habit-box {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+ }
+ 
+ 
+ .habit1 { background-color: #DBCDF0; }
+ .habit2 { background-color: #F7D9C4; }
+ .habit3 { background-color: #FAEDCB; }
+ .habit4 { background-color: #F2C6DE; }
+ 
+ 
+ /* Reminder time and days styling */
+ .reminder-time {
+    width: 100%;
+    height: 50px;
+    background-color: #bbdefb;
+    border-radius: 8px;
+ }
+ 
+ 
+ .days {
+    display: flex;
+    flex-wrap: wrap;
+ }
+ 
+ 
+ .day-box {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+ }
+ 
+ 
+ .day1, .day2, .day3, .day4, .day5, .day6, .day7 {
+    background-color: #e1bee7;
+ }
+ 
+ 
+ /* Icon styling */
+ .settings-icon, .profile-icon {
+    width: 30px;
+    height: 30px;
+ } 

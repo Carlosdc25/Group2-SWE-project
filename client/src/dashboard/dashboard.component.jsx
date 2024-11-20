@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './dashboard.component.css';
 import SettingsDialog from '../settings/settings.component';
+import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -9,6 +10,7 @@ function Dashboard() {
   const [task, setTask] = useState('');
   const [multipleTasks, setMultipleTasks] = useState([]);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getTasks();
@@ -79,6 +81,10 @@ function Dashboard() {
     return new Date().toLocaleDateString(undefined, options);
   };
 
+  const handleProfile = () => {
+    navigate('/profile');
+  }; 
+
   const toggleDialog = () => {
     setIsDialogOpen(!isDialogOpen);
   };
@@ -137,8 +143,13 @@ function Dashboard() {
       <div onClick={toggleSettings}>
         <img src="https://cdn-icons-png.flaticon.com/512/561/561135.png" alt="Settings Icon" className="settings-icon" />
       </div>
-      <div><img src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png" alt="Profile Icon" className="profile-icon"/>
-      </div>
+      <div onClick={handleProfile}>
+       <img
+         src="https://static-00.iconduck.com/assets.00/profile-icon-512x512-w0uaq4yr.png"
+         alt="Profile Icon"
+         className="profile-icon"
+       />
+     </div>
 
        
       <div className="dashboard-container">

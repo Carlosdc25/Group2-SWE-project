@@ -4,6 +4,7 @@ import { registerPushNotifications } from "./utils/registernotifsw";
 import Login from './login/login.component'; 
 import Dashboard from './dashboard/dashboard.component'; 
 import './App.css';
+import Profile from './profile/profile.component';
 
 const App = () => {
   useEffect(() => {
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         {/* Dashboard page route */}
         <Route path="/dashboard" element={<Dashboard />} />
+        {/* Profile page route */}
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
