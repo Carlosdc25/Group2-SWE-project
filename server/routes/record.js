@@ -1,85 +1,53 @@
-
 import express from "express";
-import connectDB from "../db/connection.js";
+
+// This will help us connect to the database
+import db from "../db/connection.js";
+
+// This help convert the id from string to ObjectId for the _id.
 import { ObjectId } from "mongodb";
 
+// router is an instance of the express router.
+// We use it to define our routes.
+// The router will be added as a middleware and will take control of requests starting with path /record.
 const router = express.Router();
 
+// This section will help you get a list of all the records.
 router.get("/", async (req, res) => {
-  try {
-    const db = await connectDB();
-    const collection = db.collection("records");
-    const tasks = await collection.find({}).toArray();
-    res.status(200).json(tasks);
-  } catch (err) {
-    console.error("Error retrieving tasks:", err);
-    res.status(500).send("Error retrieving tasks");
-  }
+  let collection = await db.collection("records");
+  let results = await collection.find({}).toArray();
+  res.send(results).status(200);
 });
 
-//Initial route for testing
-router.get("/", (req, res) => {
-  res.send("GET all user information!");
-});
-
-// This section will help you get a list of all the user info
-router.get("/all", async (req, res) => { // Adjusted path to avoid duplication
-  try {
-    const db = await connectDB(); // Properly call connectDB()
-    const collection = db.collection("userinfo");
-    const results = await collection.find({}).toArray();
-    res.status(200).send(results);
-  } catch (err) {
-    console.error("Error retrieving user info:", err);
-    res.status(500).send("Error retrieving user info");
-  }
-});
-
+// This section will help you get a single record by id
 router.get("/:id", async (req, res) => {
-  const { id } = req.params;
-  console.log("Received ID:", id); // Log the received ID
+  let collection = await db.collection("records");
+  let query = { _id: new ObjectId(req.params.id) };
+  let result = await collection.findOne(query);
 
-  if (!ObjectId.isValid(id)) {
-    return res.status(400).send("Invalid ID format");
-  }
-
-  try {
-    const db = await connectDB();
-    const collection = db.collection("userinfo");
-    const query = { _id: new ObjectId(id) };
-    const result = await collection.findOne(query);
-
-    if (!result) return res.status(404).send("Not found");
-    res.status(200).send(result);
-  } catch (err) {
-    console.error("Error retrieving user info:", err);
-    res.status(500).send("Error retrieving user info");
-  }
+  if (!result) res.send("Not found").status(404);
+  else res.send(result).status(200);
 });
 
-// Create a new record
+// This section will help you create a new record.
 router.post("/", async (req, res) => {
   try {
-    const db = await connectDB();
-    const collection = db.collection("userinfo");
-    const newDocument = {
+    let newDocument = {
       name: req.body.name,
       position: req.body.position,
       level: req.body.level,
     };
-    const result = await collection.insertOne(newDocument);
-    res.status(201).send(result);
+    let collection = await db.collection("records");
+    let result = await collection.insertOne(newDocument);
+    res.send(result).status(204);
   } catch (err) {
-    console.error("Error adding user info:", err);
-    res.status(500).send("Error adding user info");
+    console.error(err);
+    res.status(500).send("Error adding record");
   }
 });
 
-// Update a user's info by id
+// This section will help you update a record by id.
 router.patch("/:id", async (req, res) => {
   try {
-    const db = await connectDB();
-    const collection = db.collection("userinfo");
     const query = { _id: new ObjectId(req.params.id) };
     const updates = {
       $set: {
@@ -88,48 +56,29 @@ router.patch("/:id", async (req, res) => {
         level: req.body.level,
       },
     };
-    const result = await collection.updateOne(query, updates);
-    res.status(200).send(result);
+
+    let collection = await db.collection("records");
+    let result = await collection.updateOne(query, updates);
+    res.send(result).status(200);
   } catch (err) {
-    console.error("Error updating user info:", err);
-    res.status(500).send("Error updating user info");
+    console.error(err);
+    res.status(500).send("Error updating record");
   }
 });
 
-// Delete a user's info by id
+// This section will help you delete a record
 router.delete("/:id", async (req, res) => {
   try {
-    const db = await connectDB();
-    const collection = db.collection("userinfo");
     const query = { _id: new ObjectId(req.params.id) };
-    const result = await collection.deleteOne(query);
-    res.status(200).send(result);
-  } catch (err) {
-    console.error("Error deleting user info:", err);
-    res.status(500).send("Error deleting user info");
-  }
-});
 
-// Add a new task
-router.post("/add-task", async (req, res) => {
-  try {
-    const db = await connectDB();
-    const newHabit = {
-      habit: req.body.habit,
-      task: req.body.task,
-    };
-    console.log("New Habit Document:", newHabit);
     const collection = db.collection("records");
-    const result = await collection.insertOne(newHabit);
-    const insertedTask = await collection.findOne({ _id: result.insertedId });
+    let result = await collection.deleteOne(query);
 
-    res.status(201).send(insertedTask);
+    res.send(result).status(200);
   } catch (err) {
-    console.error("Error adding task:", err);
-    res.status(500).send("Error adding task");
+    console.error(err);
+    res.status(500).send("Error deleting record");
   }
 });
-
-
 
 export default router;
