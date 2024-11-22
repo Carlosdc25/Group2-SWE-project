@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet');
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 55px; 
+    
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.settings-dialog {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    padding-top: 25px;
+    width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+    overflow: hidden; 
+    border: 3px solid black;
+    
+}
+
+.settings-dialog::before {
+    content: '';
+    position: absolute;
+    top: 25px; /* Adjust as needed */
+    left: 60px;
+    width: 4px; /* Thickness of the vertical line */
+    height: 100%; /* Extends the full height of the container */
+    background-color: black;
+}
+
+.settings-dialog::after {
+    content: '';
+    position: absolute;
+    top: 25px; /* Change value to change place of line */
+    left: 0;
+    width: 100%; /* Extends the full width of the container */
+    height: 4px; 
+    background-color: black;
+}
+
+.rotated-text {
+    
+    writing-mode: vertical-lr;
+    font-size: 2.0em;
+    font-family: 'Gravitas One', sans-serif;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    
+    transform: rotate(180deg);
+}
+
+.settings-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+}
+
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+}
+
+.settings-content {
+    display: flex;
+    gap: 20px;
+
+}
+
+.Daily-Reminder-Time{
+    
+    background-color: #c6def1;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    width: 200px;
+    height: 100px;
+    padding: 5px;
+    
+    
+}
+
+.time-display{
+    margin-top: 10px
+}
+
+.hour-display{
+    background-color: #dbcdf0;
+    padding: 3px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+     
+}
+.colon-display{
+    background-color: #c6def1;
+    font-weight: bold;
+    padding: 2px 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+.minute-display{
+    background-color: #dbcdf0;
+    padding: 3px 5px;
+    border-radius: 8px;    
+    font-weight: bold;  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+.AM-or-PM{
+    background-color: #dbcdf0;
+    padding: 3px 5px;
+    border-radius: 8px;    
+    font-weight: bold;   
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Days to Remind */
+
+.Days-to-Remind{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: #faedcb;
+    float: right;
+    padding: 5px;
+    width : 500px;
+    border-radius: 8px;
+}
+
+.remind-days-buttons {
+    display: flex;
+    gap: 2px;
+    justify-content: space-around;
+    margin-top: 15px
+}
+
+
+.day-button {
+    padding: 11px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #dbcdf0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.day-button:hover {
+    background-color: #c4b0e4;
+}
+
+
