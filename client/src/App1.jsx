@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { registerPushNotifications } from "./utils/registernotifsw";
-import Login from "./login/login.component";
-import Dashboard from "./dashboard/dashboard.component";
-import "./App.css";
-import Profile from "./profile/profile.component";
+import Login from './login/login.component'; 
+import Dashboard from './dashboard/dashboard.component'; 
+import './App.css';
 
 const App = () => {
   useEffect(() => {
@@ -24,8 +18,6 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         {/* Dashboard page route */}
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* Profile page route */}
-        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
