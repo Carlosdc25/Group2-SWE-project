@@ -1,0 +1,29 @@
+MERN Environment Setup
+Resources used: https://www.mongodb.com/resources/languages/mern-stack-tutorial
+
+1. Download Node.js (LTS) v20.18.0 https://nodejs.org/en/
+2. cd server and install dependencies
+    npm install
+    npm install node-pushnotifications --save
+3. Create a database user in mongodb by doing the following:
+   a. In the mongodb website, navigate to the gatorsontrack overview page
+   b. Click the 'Database Access' tab on the left panel
+   c. Click the 'Add New Database User' button
+   d. Add a username, password, and give yourself a built-in role (at least read/write)
+   e. Save your username and password to be used in the config.env file you will create in step 4
+4. Create file server/config.env
+inside file, write your username and password for GATORSONTRACK mongodb in the ATLAS_URI variable
+
+ATLAS_URI=mongodb+srv://youruser:yourpassword@habittracker.rqunt.mongodb.net/users
+PORT=5050
+JWT_SECRET=abc123
+
+5. to start the server, cd server
+    npm start
+6. cd client and install dependencies
+    npm install
+7. to start the client, cd client
+    npm run dev
+8. If notification popup isn't working, right click Inspect > Application (top right) > Service Workers (left) > Update on reload
+make sure notifications are allowed for the Google Chrome app
+make sure notifications are allowed for the localhost website address (three dots top right > Settings > Privacy and security > Site settings)
