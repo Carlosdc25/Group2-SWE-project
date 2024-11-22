@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { registerPushNotifications } from "./utils/registernotifsw";
 import Login from './login/login.component'; 
 import Dashboard from './dashboard/dashboard.component'; 
 import './App.css';
 
 const App = () => {
+  useEffect(() => {
+    registerPushNotifications();
+  }, []);
   return (
     <Router>
       <Routes>
