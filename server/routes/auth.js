@@ -6,20 +6,34 @@ import jwt from 'jsonwebtoken';
 const router = express.Router();
 
 // Register a new user
-router.post('/register', async (req, res) => {
-  const { username, password, dailyReminderTime, daysToRemind } = req.body;
+router.post('/signup', async (req, res) => {
+  const { firstName, lastName, email, username, password, dailyReminderTime, daysToRemind } = req.body;
+
+  // Check if all required fields are provided
+  if (!firstName || !lastName || !email || !username || !password) {
+    return res.status(400).json({ message: 'All fields are required: firstName, lastName, email, username, and password.' });
+  }
 
   try {
-    // Check if user exists
-    const existingUser = await User.findOne({ username });
-    if (existingUser) return res.status(400).json({ message: 'User already exists' });
+    // Check if username or email already exists
+    const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+    if (existingUser) {
+      return res.status(400).json({
+        message: existingUser.username === username 
+          ? 'Username already exists' 
+          : 'Email already exists',
+      });
+    }
 
     // Create new user
     const newUser = new User({
+      firstName,
+      lastName,
+      email,
       username,
       password, // Will be hashed by schema pre-save hook
-      dailyReminderTime,
-      daysToRemind,
+      dailyReminderTime: dailyReminderTime || [],
+      daysToRemind: daysToRemind || [],
       completedDailyHabits: false,
       streak: 0,
       habits: {},
@@ -27,7 +41,7 @@ router.post('/register', async (req, res) => {
 
     await newUser.save();
 
-    // Return user data (excluding sensitive information)
+    // Return success response
     res.status(201).json({ message: 'User registered successfully', userId: newUser._id });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error });

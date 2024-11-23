@@ -53,6 +53,11 @@
   cursor: pointer;
 }
 
+/* Add spacing between buttons */
+.login-box .login-button {
+  margin-bottom: 1rem; /* Space between login and signup buttons */
+}
+
 .login-box button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
@@ -60,4 +65,10 @@
 
 .login-box button:hover:enabled {
   background-color: #9bccad;
+}
+
+/* Signup button */
+.login-box .signup-button {
+  background-color: #c9e4d3;
+  color: white;
 }
