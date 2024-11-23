@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { registerPushNotifications } from "./utils/registernotifsw";
 import Login from "./login/login.component";
+import Signup from "./signup/signup.component";
 import Dashboard from "./dashboard/dashboard.component";
 import "./App.css";
 import Profile from "./profile/profile.component";
@@ -22,6 +23,8 @@ const App = () => {
         <Route path="/" element={<Navigate to="/login" />} />
         {/* Login page route */}
         <Route path="/login" element={<Login />} />
+        {/* Signup page route */}
+        <Route path="/signup" element={<Signup />} />
         {/* Dashboard page route */}
         <Route path="/dashboard" element={<Dashboard />} />
         {/* Profile page route */}

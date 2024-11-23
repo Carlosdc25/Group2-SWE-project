@@ -11,6 +11,19 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: { 
+    type: String,
+    required: true,
+    unique: true,
+  },
   dailyReminderTime: {
     type: [String], // Array of strings to hold times in any preferred format, e.g., "08:00 AM"
     required: true,
