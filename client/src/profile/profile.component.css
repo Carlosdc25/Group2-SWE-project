@@ -107,9 +107,37 @@ body {
     background-color: #e1bee7;
  }
  
- 
+
  /* Icon styling */
  .settings-icon, .profile-icon {
     width: 30px;
     height: 30px;
  } 
+
+ .logout-container {
+   text-align: center;
+   margin-top: 20px;
+}
+
+.logout-button {
+   background-color: #e1bee7; /* Matches the day-box color */
+   color: white;
+   font-size: 16px;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 8px; /* Rounded corners to match other elements */
+   cursor: pointer;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to match boxes */
+   transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.logout-button:hover {
+   background-color: #d1a3e0; /* Slightly darker purple for hover */
+}
+
+.logout-button:active {
+   background-color: #bb8bc9; /* Even darker purple for active state */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow for active state */
+}
