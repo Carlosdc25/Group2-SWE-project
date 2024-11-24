@@ -5,9 +5,18 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-// Initial route for testing
-router.get("/", (req, res) => {
-  res.send("GET all user information!");
+// Gets a user's info by id
+router.get("/", async (req, res) => {
+  const userId = req.query.userId; // Assume userId is passed as a query param
+  try {
+    const db = await connectDB();
+    const collection = db.collection("userinfo");
+    const results = await collection.find({ _id: new ObjectId(userId) }).toArray();
+    res.status(200).send(results);
+  } catch (err) {
+    console.error("Error retrieving user info:", err);
+    res.status(500).send("Error retrieving user info");
+  }
 });
 
 // This section will help you get a list of all the user info
@@ -116,5 +125,3 @@ router.post("/add-task", async (req, res) => {
 });
 
 export default router;
-
-
