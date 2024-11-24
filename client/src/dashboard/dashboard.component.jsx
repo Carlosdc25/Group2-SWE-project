@@ -4,6 +4,8 @@ import SettingsDialog from "../settings/settings.component";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  // Declares userData variable (holds logged in user's data)
+  const [userData, setUserData] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
   const [selectedHabit, setSelectedHabit] = useState("");
@@ -13,6 +15,13 @@ function Dashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Retrieves user data from localStorage
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUserData(JSON.parse(storedUser));
+    } else {
+      navigate('/login'); // Redirect to login if no user is found
+    }
     getTasks();
   }, []);
 
@@ -129,7 +138,7 @@ function Dashboard() {
 
   return (
     <div>
-      <div className="header">{getGreeting()}, Alexa</div>
+      <div className="header">{getGreeting()}, {userData?.firstName || "Guest"}!</div>
       <p className="text">Today is {getCurrentDate()}</p>
       <div onClick={toggleSettings}>
         <img
