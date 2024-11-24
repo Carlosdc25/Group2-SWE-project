@@ -15,6 +15,13 @@ const Profile = () => {
     setIsSettingsOpen(!isSettingsOpen);
   };
 
+  const handleLogout = () => {
+    // Clears all local storage items
+    localStorage.clear();
+    // Redirects user to login page
+    navigate("/login");
+  };
+
   return (
     <div>
       <div class="header-container">
@@ -66,6 +73,13 @@ const Profile = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Logout Button */}
+      <div className="logout-container">
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
 
       {/* Settings Dialog */}
