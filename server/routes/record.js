@@ -1,6 +1,7 @@
 
 import express from "express";
 import connectDB from "../db/connection.js";
+import User from "../models/User.js";
 import { ObjectId } from "mongodb";
 
 const router = express.Router();
@@ -19,6 +20,34 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/get-habits", async (req, res) => {
+  const { username } = req.query;
+
+  if (!username) {
+    return res.status(400).send("Username is required");
+  }
+
+  try {
+    const db = await connectDB();
+    const collection = db.collection("userinfo");
+
+    // Fetch the user's habits
+    const user = await collection.findOne(
+      { username },
+      { projection: { habits: 1 } } // Only return the habits field
+    );
+
+    if (!user || !user.habits) {
+      return res.status(404).send("No habits found for this user");
+    }
+
+    res.status(200).json(user.habits); // Send the habits as the response
+  } catch (error) {
+    console.error("Error retrieving habits:", error);
+    res.status(500).send("Error retrieving habits");
+  }
+});
+
 // This section will help you get a list of all the user info
 router.get("/all", async (req, res) => { // Adjusted path to avoid duplication
   try {
@@ -31,6 +60,98 @@ router.get("/all", async (req, res) => { // Adjusted path to avoid duplication
     res.status(500).send("Error retrieving user info");
   }
 });
+
+//updates the Habit Title
+router.patch("/update-habit-title/:username", async (req, res) => {
+
+  console.log("PATCH /update-habit-title called");
+  console.log("Params:", req.params); // Log the username
+  console.log("Body:", req.body);
+
+  const { username } = req.params;
+  const { oldTitle, newTitle } = req.body;
+
+  if (!username || !oldTitle || !newTitle) {
+    return res.status(400).send("Username, oldTitle, and newTitle are required");
+  }
+
+  try {
+    const db = await connectDB();
+    const collection = db.collection("userinfo");
+
+    // Renaming the Habit Field
+    const result = await collection.updateOne(
+      { username },
+      {
+        $rename: {
+          [`habits.${oldTitle}`]: `habits.${newTitle}`,
+        },
+      }
+    );
+
+    if (result.modifiedCount === 0) {
+      return res.status(404).send("Habit title not found or update failed");
+    }
+
+    res.status(200).send("Habit title updated successfully");
+  } catch (err) {
+    console.error("Error updating habit title:", err);
+    res.status(500).send("Error updating habit title");
+  }
+});
+
+
+
+router.get("/get-tasks", async (req, res) => {
+  const { username } = req.query;
+
+  if (!username) return res.status(400).send("userId query parameter is required");
+
+  try {
+    const db = await connectDB();
+    const collection = db.collection("userinfo");
+
+    const user = await collection.findOne(
+      { username},
+      { projection: { habits: 1 } } // Only return the habits field
+    );
+
+    if (!user) return res.status(404).send("User not found");
+
+    res.status(200).json(user.habits || {}); //returns empty object if no user is defined
+  } catch (err) {
+    console.error("Error retrieving tasks:", err);
+    res.status(500).send("Error retrieving tasks");
+  }
+});
+
+router.delete("/delete-task/:username/:habit/:taskId", async (req, res) => {
+  const { username, habit, taskId } = req.params;
+
+  if (!username || !habit || !taskId) {
+    return res.status(400).send("Username, habit, and taskId are required");
+  }
+
+  try {
+    const db = await connectDB();
+    const collection = db.collection("userinfo");
+
+    const result = await collection.updateOne(
+      { username },
+      { $pull: { [`habits.${habit}`]: { _id: new ObjectId(taskId) } } }
+    );
+
+    if (result.modifiedCount === 0) {
+      return res.status(404).send("Task not found or already deleted");
+    }
+
+    res.status(200).send("Task deleted successfully");
+  } catch (err) {
+    console.error("Error deleting task:", err);
+    res.status(500).send("Error deleting task");
+  }
+});
+
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
@@ -108,16 +229,50 @@ router.delete("/:id", async (req, res) => {
 });
 
 // Add a new task
+// router.post("/add-task", async (req, res) => {
+//   try {
+//     const db = await connectDB();
+//     const newHabit = {
+//       habit: req.body.habit,
+//       task: req.body.task,
+//     };
+//     const collection = db.collection("userinfo");
+//     const result = await collection.insertOne(newHabit);
+//     res.status(201).send(result);
+//   } catch (err) {
+//     console.error("Error adding task:", err);
+//     res.status(500).send("Error adding task");
+//   }
+// });
+// Get a user's habits and tasks
+
+
+// Add a new task to a user's habit
 router.post("/add-task", async (req, res) => {
+  const { username, habit, task } = req.body;
+
+  if (!username || !habit || !task) {
+    return res.status(400).send("username, habit, and task are required");
+  }
+
   try {
+    //create new task
+    const newTask = { _id: new ObjectId(), task };
+
     const db = await connectDB();
-    const newHabit = {
-      habit: req.body.habit,
-      task: req.body.task,
-    };
     const collection = db.collection("userinfo");
-    const result = await collection.insertOne(newHabit);
-    res.status(201).send(result);
+    
+    const result = await collection.updateOne(
+      { username },
+      { $push: { [`habits.${habit}`]: newTask } }, 
+      { upsert: true } 
+    );
+
+    if (result.modifiedCount === 0 && !result.upsertedCount) {
+      return res.status(404).send("User not found or task addition failed");
+    }
+
+    res.status(201).send("Task added successfully");
   } catch (err) {
     console.error("Error adding task:", err);
     res.status(500).send("Error adding task");

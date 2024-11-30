@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 const router = express.Router();
+const predefinedHabits = ["High Priority", "Academics", "Gym", "Home"]; //Initializing habits to be these
 
 // Register a new user
 router.post('/signup', async (req, res) => {
@@ -25,6 +26,11 @@ router.post('/signup', async (req, res) => {
       });
     }
 
+    const habits = {};
+    predefinedHabits.forEach(habit => {
+      habits[habit] = []; // Initialize each habit with an empty array
+    });
+
     // Create new user
     const newUser = new User({
       firstName,
@@ -36,7 +42,7 @@ router.post('/signup', async (req, res) => {
       daysToRemind: daysToRemind || [],
       completedDailyHabits: false,
       streak: 0,
-      habits: {},
+      habits,
     });
 
     await newUser.save();
@@ -51,9 +57,10 @@ router.post('/signup', async (req, res) => {
 // Login user
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
-
+  
   try {
     const user = await User.findOne({ username });
+    console.log('Retrieved User from Database:', user);
     if (!user) return res.status(400).json({ message: 'Invalid username or password' });
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -62,11 +69,13 @@ router.post('/login', async (req, res) => {
     // Generate JWT token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
+    
+
     res.status(200).json({
       message: 'Login successful',
       token,
       userData: {
-        _id: user._id,
+        _id: user._id, 
         username: user.username,
         firstName: user.firstName, // Include firstName
         lastName: user.lastName,   // Include lastName

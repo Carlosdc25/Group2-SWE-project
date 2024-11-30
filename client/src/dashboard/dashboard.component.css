@@ -141,3 +141,93 @@ body {
     background-color: #C9E4DE;
     border: 1.5px solid #0b5d34;
 }
+
+.delete-task-button {
+    background-color: #ff5a81;
+    color: white;
+    border: none;
+    padding: 0;
+    width: 15px; 
+    height: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; 
+    cursor: pointer;
+    border-radius: 50%; 
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.delete-task-button:hover {
+background-color: #e60000;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-bottom: 5px;
+}
+
+.box-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.edit-icon {
+    margin-left: 10px; 
+    font-size: 0.8rem; 
+    color: #676767; 
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+}
+
+.edit-icon:hover {
+    color: #000; 
+    font-weight: bold;
+}
+
+
+.edit-habit-title{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; /* Align items at the top */
+    gap: 0px; 
+}
+
+.Save-Title-Edit {
+    background-color: #7fd7c4;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.Save-Title-Edit:hover {
+    background-color: #6fd59e;
+    font-weight: bold;
+}
+
+.Cancel-Title-Edit {
+    background-color: transparent;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.Cancel-Title-Edit:hover {
+    font-weight: bold;
+}
+
+.Save-&-Cancel-Column{
+    display: flex;
+    flex-direction: column; /* Stack the Save and Cancel buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Space between the Save and Cancel buttons */
+}

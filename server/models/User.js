@@ -1,7 +1,21 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
+//wanted to give tasks id so they could be deleted easier and without as many bugs
+const taskSchema = new mongoose.Schema({
+  _id: {
+    type: mongoose.Schema.Types.ObjectId, // Unique identifier for each task
+    required: true,
+    default: () => new mongoose.Types.ObjectId(),
+  },
+  task: {
+    type: String,
+    required: true,
+  },
+});
+
 const userSchema = new mongoose.Schema({
+  
   username: {
     type: String,
     required: true,
@@ -42,7 +56,8 @@ const userSchema = new mongoose.Schema({
   },
   habits: {
     type: Map,
-    of: String, // Assuming the 'habits' object holds key-value pairs, with values as strings
+    of: [taskSchema], // Each habit contains an array of task objects
+    default: {},
   },
 }, { timestamps: true }); // Adds createdAt and updatedAt fields
 
