@@ -341,7 +341,7 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {isSettingsOpen && <SettingsDialog onClose={toggleSettings} />}
+      {isSettingsOpen && userData && <SettingsDialog onClose={toggleSettings} userData={userData} />}
     </div>
   );
 }

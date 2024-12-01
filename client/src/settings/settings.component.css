@@ -183,6 +183,7 @@
     border: none;
     cursor: pointer;
     background-color: #dbcdf0;
+    /*background-color: #F2C6DE;*/
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
 }
@@ -190,5 +191,10 @@
 .day-button:hover {
     background-color: #c4b0e4;
 }
+
+.day-button.active {
+    background-color: #F2C6DE; /* highlight with pink */
+    color: white;
+  }
 
 
