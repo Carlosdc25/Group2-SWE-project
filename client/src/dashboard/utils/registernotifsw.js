@@ -1,3 +1,12 @@
+/*Sources
+
+Notifications
+https://www.youtube.com/watch?v=0-bSQ14H_PY
+https://github.com/JEverhart383/knock-browser-push-demo/blob/main/package-lock.json
+https://knock.app/blog/how-to-send-browser-push-notifications-from-nodejs
+https://vapidkeys.com/
+https://iamwebwiz.medium.com/how-to-fix-dirname-is-not-defined-in-es-module-scope-34d94a86694d*/
+
 const publicVapidKey = "BBFPmJ3We2RjxJ1fbMFaznxyX1FvgDy0mrk2dWZFDQZBRGjbIKoL_gJj8NoVld4sCaZ3N-Tit6CSJaK5iwVAjQA"; // Replace with your actual key
 
 // Function to register the service worker and set up push notifications
