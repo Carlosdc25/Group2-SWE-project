@@ -5,11 +5,12 @@ import "./settings.component.css";
 function Settings({ onClose, userData, onUpdateUserData }) {
   const [dailyReminderTime, setDailyReminderTime] = useState(userData.dailyReminderTime);
   const [daysToRemind, setDaysToRemind] = useState(userData.daysToRemind);
+  
 
-  const handleReminderChange = async (updatedDaysToRemind) => {
+  const handleReminderChange = async (updatedDaysToRemind=daysToRemind, updatedDailyReminderTime=dailyReminderTime) => {
     const changes = {
       username: userData.username,
-      newDailyReminderTime: dailyReminderTime,
+      newDailyReminderTime: updatedDailyReminderTime || dailyReminderTime,
       newDaysToRemind: updatedDaysToRemind || daysToRemind,
     };
 
@@ -23,9 +24,10 @@ function Settings({ onClose, userData, onUpdateUserData }) {
       });
 
       if (response.ok) {
-        console.log(`Settings changed successfully!`);
+        //console.log(`Settings changed successfully!`);
+        //console.log("updated userData time " + updatedDailyReminderTime);
         onUpdateUserData({
-          dailyReminderTime,
+          dailyReminderTime: updatedDailyReminderTime || dailyReminderTime,
           daysToRemind: updatedDaysToRemind || daysToRemind,
         });
       } else {
@@ -39,10 +41,38 @@ function Settings({ onClose, userData, onUpdateUserData }) {
 
   const handleTimeChange = (newTime) => {
     if (newTime) {
+        console.log("input time " + newTime);
       const [hour, minute] = newTime.split(":").map(Number);
-      const period = newTime.includes("PM") ? "PM" : "AM";
-      setDailyReminderTime([hour, minute, period]);
-      handleReminderChange();
+      //const period = newTime.includes("PM") ? "PM" : "AM";
+      var period = "a";
+      if (hour >= 12) {
+        period = "PM";
+      } else {
+        period = "AM"
+      }
+      //setDailyReminderTime([hour, minute, period]);
+      //handleReminderChange([hour, minute, period]);
+
+      setDailyReminderTime((prevTimes) => {
+        const updatedTime = [hour, minute, period];
+        handleReminderChange(undefined, updatedTime);
+        //handleReminderChange(updatedDailyReminderTime=updatedTime);
+        return updatedTime;
+      });
+      /*
+        onUpdateUserData({
+            dailyReminderTime: [hour, minute, period] || dailyReminderTime,
+            //daysToRemind: updatedDaysToRemind || daysToRemind,
+          });
+        setUserData((prevData) => {
+          const updatedData = {
+            ...prevData,
+            dailyReminderTime: timeArray,
+          };
+          handleReminderChange(updatedData.dailyReminderTime); // Use updated state
+          return updatedData;
+        });
+      }; */
     }
   };
 
@@ -51,7 +81,7 @@ function Settings({ onClose, userData, onUpdateUserData }) {
       const updatedDays = prevDays.includes(day)
         ? prevDays.filter((d) => d !== day)
         : [...prevDays, day];
-      handleReminderChange(updatedDays);
+      handleReminderChange(updatedDays, undefined);
       return updatedDays;
     });
   };

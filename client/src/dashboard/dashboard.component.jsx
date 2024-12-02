@@ -20,87 +20,96 @@ function Dashboard() {
   const [newHabitTitle, setNewHabitTitle] = useState("");
   const [checkedTasks, setCheckedTasks] = useState({}); //greying out tasks when completed
 
-
-
   useEffect(() => {
     // Retrieve user data from localStorage
-    const storedUser = localStorage.getItem('user');
-    console.log('Raw storedUser from localStorage:', storedUser); // Debugging
+    const storedUser = localStorage.getItem("user");
+    console.log("Raw storedUser from localStorage:", storedUser); // Debugging
     console.log(habits);
     const link = document.createElement("link");
-    link.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"; //for pencil icon
+    link.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"; //for pencil icon
     link.rel = "stylesheet";
     document.head.appendChild(link);
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
-      console.log('Parsed User:', parsedUser); // Debugging
-  
+      console.log("Parsed User:", parsedUser); // Debugging
+
       if (parsedUser.username) {
-        console.log('Parsed Username:', parsedUser.username); // More Debugging 
+        console.log("Parsed Username:", parsedUser.username); // More Debugging
         setUserData(parsedUser);
         fetchHabits(parsedUser.username); // Fetch habits dynamically from the database
         console.log("Habits state updated:", habits);
         getTasks(parsedUser.username); // Pass the username to fetch tasks
       } else {
-        console.error('Username is missing from storedUser');
+        console.error("Username is missing from storedUser");
       }
     } else {
-      
-      navigate('/login', { replace: true }); // Redirect if no user is found
+      navigate("/login", { replace: true }); // Redirect if no user is found
     }
-  }, []);
-
-  
+  }, []); //empty array, runs once when component mounts
 
   useEffect(() => {
     const interval = setInterval(() => {
-      //const time = userData.dailyReminderTime;
-      //const days = userData.daysToRemind;
-      const time = ["2", "56", "AM"];
-      const days = ["Monday", "Tuesday"];
-      if(isCurrentDateAndTimeMatching(time, days)) {
-        registerPushNotifications();
+      const currentUserData = userData;
+      if (currentUserData === null) {
+        console.log("userData undefined");
+      } else {
+        const time = userData.dailyReminderTime;
+        const days = userData.daysToRemind;
+        console.log("stored" + time + " " + days);
+        //const time = ["2", "56", "AM"];
+        //const days = ["Monday", "Tuesday"];
+        //console.log(isCurrentDateAndTimeMatching(time, days))
+        if (isCurrentDateAndTimeMatching(time, days)) {
+          registerPushNotifications();
+        }
       }
     }, 1000); // Updates every second
 
     // Cleanup function to clear the interval when the component unmounts
     return () => clearInterval(interval);
-  }, []); // Empty dependency array means it runs only once when the component mounts
+  }, [userData]);
 
   function isCurrentDateAndTimeMatching(time, days) {
     // Get the current date and time
     const currentDate = new Date();
-    
+
     // Get current hour, minute, and period (AM/PM)
     let currentHour = currentDate.getHours();
     const currentMinute = currentDate.getMinutes();
     const currentPeriod = currentHour >= 12 ? "PM" : "AM";
-    
+
     // Convert 24-hour format to 12-hour format for comparison
-    currentHour = currentHour % 12;
-    currentHour = currentHour === 0 ? 12 : currentHour; // Handle the case for 12 PM and 12 AM
-    
+    //currentHour = currentHour % 12;
+    //currentHour = currentHour === 0 ? 12 : currentHour; // Handle the case for 12 PM and 12 AM
+
     // Get the current day of the week
-    const currentDay = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
-    
+    const currentDay = currentDate.toLocaleDateString("en-US", {
+      weekday: "long",
+    });
+
     // Check if the current time matches the given time array
-    const timeMatches = (
-      String(currentHour) === time[0] &&
-      String(currentMinute).padStart(2, "0") === time[1] &&
-      currentPeriod === time[2]
-    );
-  
+    //console.log(" currentHour " + String(currentHour) + " time[0] " + time[0]);
+    //console.log(" currentMin " + String(currentMinute).padStart(2, "0") + " time[1] " + time[1]);
+    //console.log(" currentPeriod " + " time[2] " + time[2]);
+    //console.log(currentMinute === time[1] );
+    const timeMatches =
+      currentHour === time[0] &&
+      currentMinute === time[1] 
+      //&&
+      //currentPeriod === time[2];
+
     // Check if the current day matches the given days array
     const dayMatches = days.includes(currentDay);
-  
+    //console.log("timeMatches" + timeMatches + " dayMatches" + dayMatches);
     // Return whether both conditions are true
     return timeMatches && dayMatches;
   }
 
   const handleTaskCheck = (habit, taskId) => {
     setCheckedTasks((prev) => ({
-        ...prev,
-        [taskId]: !prev[taskId], // Toggle the checked state
+      ...prev,
+      [taskId]: !prev[taskId], // Toggle the checked state
     }));
   };
 
@@ -108,10 +117,11 @@ function Dashboard() {
     setUserData((prevData) => ({ ...prevData, ...updatedData }));
   };
 
-
   const fetchHabits = async (username) => {
     try {
-      const response = await fetch(`http://localhost:5050/record/get-habits?username=${username}`);
+      const response = await fetch(
+        `http://localhost:5050/record/get-habits?username=${username}`
+      );
       if (response.ok) {
         const data = await response.json();
         const habitTitles = Object.keys(data); // Extract habit titles from the database response
@@ -126,7 +136,7 @@ function Dashboard() {
 
   const getHabitColor = (index) => {
     const colors = ["#DBCDF0", "#F7D9C4", "#FAEDCB", "#F2C6DE"]; // Static colors for boxes, since the titles can now change
-    return colors[index ]; 
+    return colors[index];
   };
 
   const toggleDeleteMode = () => {
@@ -135,19 +145,23 @@ function Dashboard() {
 
   const getTasks = async (username) => {
     try {
-      const response = await fetch(`http://localhost:5050/record/get-tasks?username=${username}`);
+      const response = await fetch(
+        `http://localhost:5050/record/get-tasks?username=${username}`
+      );
       if (response.ok) {
         const data = await response.json();
         console.log("Tasks retrieved for username:", username, data);
         setMultipleTasks(data); // Expecting `data` to be an object of habits that map to tasks
       } else {
-        console.error("Failed to get tasks for dashboard:", response.statusText);
+        console.error(
+          "Failed to get tasks for dashboard:",
+          response.statusText
+        );
       }
     } catch (error) {
       console.error("Error getting tasks for dashboard", error);
     }
   };
-
 
   const getGreeting = () => {
     const currentHour = new Date().getHours();
@@ -168,12 +182,15 @@ function Dashboard() {
 
   const saveHabitTitle = async (oldTitle) => {
     try {
-      const response = await fetch(`http://localhost:5050/record/update-habit-title/${userData.username}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ oldTitle, newTitle: newHabitTitle }),
-      });
-  
+      const response = await fetch(
+        `http://localhost:5050/record/update-habit-title/${userData.username}`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ oldTitle, newTitle: newHabitTitle }),
+        }
+      );
+
       if (response.ok) {
         console.log("Habit title updated successfully");
         // Update habits in localStorage
@@ -181,7 +198,9 @@ function Dashboard() {
         localStorage.setItem("user", JSON.stringify(updatedUser));
   
         setHabits((prevHabits) =>
-          prevHabits.map((habit) => (habit === oldTitle ? newHabitTitle : habit))
+          prevHabits.map((habit) =>
+            habit === oldTitle ? newHabitTitle : habit
+          )
         );
         setEditingHabit(null);
         getTasks(userData.username);
@@ -214,7 +233,7 @@ function Dashboard() {
       habit: selectedHabit,
       task,
     };
-  
+
     try {
       const response = await fetch("http://localhost:5050/record/add-task", {
         method: "POST",
@@ -223,7 +242,7 @@ function Dashboard() {
         },
         body: JSON.stringify(newTask),
       });
-  
+
       if (response.ok) {
         console.log(`Task for ${selectedHabit}: ${task} added successfully!`);
         setTask(""); // Clear input
@@ -236,17 +255,17 @@ function Dashboard() {
       console.error("Error adding task:", error);
       alert(`Error: ${error.message}`);
     }
-  
+
     setIsTaskDialogOpen(false); // Close pop-up
   };
-  
+
   const handleDeleteTask = async (username, habit, taskId) => {
     try {
       const response = await fetch(
         `http://localhost:5050/record/delete-task/${username}/${habit}/${taskId}`,
         { method: "DELETE" }
       );
-  
+
       if (response.ok) {
         console.log(`Task with ID ${taskId} deleted successfully!`);
         getTasks(username); // Refresh tasks after deletion
@@ -264,11 +283,13 @@ function Dashboard() {
 
   const startEditingHabit = (habit) => {
     setEditingHabit(habit);
-    setNewHabitTitle(habit); 
+    setNewHabitTitle(habit);
   };
   return (
     <div>
-      <div className="header">{getGreeting()}, {userData?.firstName || "Guest"}!</div>
+      <div className="header">
+        {getGreeting()}, {userData?.firstName || "Guest"}!
+      </div>
       <p className="text">Today is {getCurrentDate()}</p>
       <div onClick={toggleSettings}>
         <img
@@ -303,69 +324,87 @@ function Dashboard() {
                   placeholder="Enter new title"
                 />
                 <div className="Save-&-Cancel-Column">
-                  <button className="Save-Title-Edit" onClick={() => saveHabitTitle(habit)}>Save</button> {/* Parameter is old habit */}
-                  <button className="Cancel-Title-Edit" onClick={() => setEditingHabit(null)}>Cancel</button>
+                  <button
+                    className="Save-Title-Edit"
+                    onClick={() => saveHabitTitle(habit)}
+                  >
+                    Save
+                  </button>{" "}
+                  {/* Parameter is old habit */}
+                  <button
+                    className="Cancel-Title-Edit"
+                    onClick={() => setEditingHabit(null)}
+                  >
+                    Cancel
+                  </button>
                 </div>
               </div>
             ) : (
               <div className="box-title">
                 {habit}
                 <i
-                className="fas fa-pencil-alt edit-icon"
-                onClick={() => startEditingHabit(habit)}
+                  className="fas fa-pencil-alt edit-icon"
+                  onClick={() => startEditingHabit(habit)}
                 ></i>
               </div>
             )}
             <div className="box-content">
-            {multipleTasks[habit] && multipleTasks[habit].length > 0 ? (
-              multipleTasks[habit].map((taskItem) => (
-                <div key={taskItem._id} className="task-item">
+              {multipleTasks[habit] && multipleTasks[habit].length > 0 ? (
+                multipleTasks[habit].map((taskItem) => (
+                  <div key={taskItem._id} className="task-item">
+                    {/* Conditionally showing the delete buttons */}
+                    {showDeleteButtons && (
+                      <button
+                        className="delete-task-button"
+                        onClick={() =>
+                          handleDeleteTask(
+                            userData.username,
+                            habit,
+                            taskItem._id
+                          )
+                        }
+                      >
+                        &minus;
+                      </button>
+                    )}
 
-                  {/* Conditionally showing the delete buttons */}
-                  {showDeleteButtons &&(
-                    <button className="delete-task-button" onClick={() => handleDeleteTask(userData.username, habit, taskItem._id)}>
-                      &minus;
-                    </button>
-                  )}
-
-                  <input
-                    type="checkbox"
-                    checked={!!checkedTasks[taskItem._id]}
-                    onChange={() => handleTaskCheck(habit, taskItem._id)}
-                  />
-                  <span
-                    className="task-text"
-                    style={{
-                      textDecoration: checkedTasks[taskItem._id] ? 'line-through' : 'none',
-                      
-                    }}
-                  >
-                    {taskItem.task}
-                  </span>
-
-                </div>
-              ))
-            ) : (
-              <p>No tasks</p>
-            )}
-            
+                    <input
+                      type="checkbox"
+                      checked={!!checkedTasks[taskItem._id]}
+                      onChange={() => handleTaskCheck(habit, taskItem._id)}
+                    />
+                    <span
+                      className="task-text"
+                      style={{
+                        textDecoration: checkedTasks[taskItem._id]
+                          ? "line-through"
+                          : "none",
+                      }}
+                    >
+                      {taskItem.task}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <p>No tasks</p>
+              )}
             </div>
           </div>
         ))}
       </div>
-      
+
       <div className="button-container">
-        <button className="add-habit-button" onClick={toggleDialog}> {/* Add Habit Button */}
+        <button className="add-habit-button" onClick={toggleDialog}>
+          {" "}
+          {/* Add Habit Button */}
           Add Habit
         </button>
-        <button className="edit-mode-button" onClick={toggleDeleteMode}> {/* Edit or Done Button, for deletion */}
+        <button className="edit-mode-button" onClick={toggleDeleteMode}>
+          {" "}
+          {/* Edit or Done Button, for deletion */}
           {showDeleteButtons ? "Done" : "Edit"}
         </button>
       </div>
-
-
-      
-      
 
       {/* Dialog */}
       {isDialogOpen && (
@@ -397,7 +436,13 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {isSettingsOpen && userData && <SettingsDialog onClose={toggleSettings} userData={userData} onUpdateUserData={handleUserDataUpdate}/>}
+      {isSettingsOpen && userData && (
+        <SettingsDialog
+          onClose={toggleSettings}
+          userData={userData}
+          onUpdateUserData={handleUserDataUpdate}
+        />
+      )}
     </div>
   );
 }
