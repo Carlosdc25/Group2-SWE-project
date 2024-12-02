@@ -64,7 +64,7 @@ function Dashboard() {
           registerPushNotifications();
         }
       }
-    }, 30000); // Updates every second
+    }, 20000); // Updates every 20 seconds
 
     // Cleanup function to clear the interval when the component unmounts
     return () => clearInterval(interval);
