@@ -147,3 +147,20 @@ const dayMapping = [
 ];
 
 export default Settings;
+
+/*Sources
+
+Notifications
+https://www.youtube.com/watch?v=0-bSQ14H_PY
+https://github.com/JEverhart383/knock-browser-push-demo/blob/main/package-lock.json
+https://knock.app/blog/how-to-send-browser-push-notifications-from-nodejs
+https://vapidkeys.com/
+https://iamwebwiz.medium.com/how-to-fix-dirname-is-not-defined-in-es-module-scope-34d94a86694d
+
+Time Picker/Settings frontend
+https://www.geeksforgeeks.org/how-to-create-time-picker-in-reactjs/
+https://mui.com/x/react-date-pickers/time-picker/
+https://ej2.syncfusion.com/react/documentation/timepicker/style-appearance
+https://projects.wojtekmaj.pl/react-time-picker/
+https://github.com/wojtekmaj/react-time-picker/blob/main/packages/react-time-picker/src/TimePicker.css
+*/
