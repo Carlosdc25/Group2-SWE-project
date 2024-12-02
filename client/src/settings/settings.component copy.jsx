@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import TimePicker from "react-time-picker";
+import React, { useState, useEffect } from "react";
 import "./settings.component.css";
+//import TimePicker from 'react-time-picker';
+
 
 function Settings({ onClose, userData, onUpdateUserData }) {
-  const [dailyReminderTime, setDailyReminderTime] = useState(userData.dailyReminderTime);
+  const [dailyReminderTime, setDailyReminderTime] = useState(
+    userData.dailyReminderTime
+  );
   const [daysToRemind, setDaysToRemind] = useState(userData.daysToRemind);
 
   const handleReminderChange = async (updatedDaysToRemind) => {
@@ -14,13 +17,16 @@ function Settings({ onClose, userData, onUpdateUserData }) {
     };
 
     try {
-      const response = await fetch("http://localhost:5050/record/reminder-change", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(changes),
-      });
+      const response = await fetch(
+        "http://localhost:5050/record/reminder-change",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(changes),
+        }
+      );
 
       if (response.ok) {
         console.log(`Settings changed successfully!`);
@@ -37,13 +43,10 @@ function Settings({ onClose, userData, onUpdateUserData }) {
     }
   };
 
-  const handleTimeChange = (newTime) => {
-    if (newTime) {
-      const [hour, minute] = newTime.split(":").map(Number);
-      const period = newTime.includes("PM") ? "PM" : "AM";
-      setDailyReminderTime([hour, minute, period]);
-      handleReminderChange();
-    }
+  const handleTimeChange = (e) => {
+    const [hour, minute, period] = e.target.value.split(":");
+    setDailyReminderTime([parseInt(hour), parseInt(minute), period]);
+    handleReminderChange();
   };
 
   const handleDayClick = (day) => {
@@ -51,7 +54,7 @@ function Settings({ onClose, userData, onUpdateUserData }) {
       const updatedDays = prevDays.includes(day)
         ? prevDays.filter((d) => d !== day)
         : [...prevDays, day];
-      handleReminderChange(updatedDays);
+      handleReminderChange(updatedDays); // Pass the updated days directly
       return updatedDays;
     });
   };
@@ -67,22 +70,57 @@ function Settings({ onClose, userData, onUpdateUserData }) {
           <div className="settings-header">
             <h2>Notification Settings</h2>
           </div>
+
           <div className="settings-content">
-
+            
           <div className="Daily-Reminder-Time">
-            <label>Daily Reminder Time</label>
-            <div className="time-picker-container">
-                <TimePicker
-                onChange={handleTimeChange}
-                value={`${dailyReminderTime[0].toString().padStart(2, "0")}:${dailyReminderTime[1]
-                  .toString()
-                  .padStart(2, "0")} ${dailyReminderTime[2]}`}
-                format="hh:mm a" // 12-hour format with AM/PM
-                className="time-picker-input"
-                />
+              <label>Daily Reminder Time</label>
+              <div className="time-display" onClick={handleTimeChange}>
+                <label className="hour-display">
+                  {String(dailyReminderTime[0]).padStart(2, "0")}
+                </label>
+                <label className="colon-display">:</label>
+                <label className="minute-display">
+                  {String(dailyReminderTime[1]).padStart(2, "0")}
+                </label>
+                <label className="AM-or-PM"> {dailyReminderTime[2]}</label>
+              </div>
             </div>
-            </div>
+            
+            {/*
+            IMPORT REACT TIME PICKER
+            <div className="Daily-Reminder-Time">
+              <label>Daily Reminder Time</label>
+              <div className="time-display">
 
+              <TimePicker
+                onChange={handleTimeChange}
+                value={`${dailyReminderTime[0]}:${dailyReminderTime[1]} ${dailyReminderTime[2]}`}
+                format="hh:mm a" // 12-hour format with AM/PM
+                />
+              </div>
+            </div>
+            */}
+            {/* 
+            IMPORT npm install @mui/x-date-pickers
+            <div className="Daily-Reminder-Time">
+                <label>Daily Reminder Time</label>
+                 
+                <TextField
+                    label="Choose Time"
+                    type="time"
+                    value={String(dailyReminderTime[0]).padStart(2, "0") + ":" + String(dailyReminderTime[1]).padStart(2, "0")}
+                    InputLabelProps={{
+                    shrink: true,
+                    }}
+                    inputProps={{
+                    step: 300, // 5 minutes
+                    }}
+                    onChange={handleTimeChange}
+                />
+                
+            </div>
+            */}
             <div className="Days-to-Remind">
               <div>Days to Remind</div>
               <div className="remind-days-buttons">
