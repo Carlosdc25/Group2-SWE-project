@@ -5,6 +5,6 @@ self.addEventListener("push", (e) => {
   console.log("Push Recieved...");
 
   self.registration.showNotification(data.title, {
-    body: "You will now receive daily habit notifications",
+    body: "Time to complete your habits!",
   });
 });

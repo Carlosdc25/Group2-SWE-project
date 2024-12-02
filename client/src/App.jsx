@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { registerPushNotifications } from "./utils/registernotifsw";
+import { registerPushNotifications } from "./dashboard/utils/registernotifsw";
 import Login from "./login/login.component";
 import Signup from "./signup/signup.component";
 import Dashboard from "./dashboard/dashboard.component";
@@ -13,9 +13,11 @@ import "./App.css";
 import Profile from "./profile/profile.component";
 
 const App = () => {
+  /*
   useEffect(() => {
     registerPushNotifications();
   }, []);
+  */
   return (
     <Router>
       <Routes>

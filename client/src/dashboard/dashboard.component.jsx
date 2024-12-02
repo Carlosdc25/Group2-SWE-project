@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./dashboard.component.css";
 import SettingsDialog from "../settings/settings.component";
 import { useNavigate } from "react-router-dom";
+import { registerPushNotifications } from "./utils/registernotifsw";
 
 function Dashboard() {
   // Declares userData variable (holds logged in user's data)
@@ -48,6 +49,53 @@ function Dashboard() {
       navigate('/login', { replace: true }); // Redirect if no user is found
     }
   }, []);
+
+  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      //const time = userData.dailyReminderTime;
+      //const days = userData.daysToRemind;
+      const time = ["2", "56", "AM"];
+      const days = ["Monday", "Tuesday"];
+      if(isCurrentDateAndTimeMatching(time, days)) {
+        registerPushNotifications();
+      }
+    }, 1000); // Updates every second
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array means it runs only once when the component mounts
+
+  function isCurrentDateAndTimeMatching(time, days) {
+    // Get the current date and time
+    const currentDate = new Date();
+    
+    // Get current hour, minute, and period (AM/PM)
+    let currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+    const currentPeriod = currentHour >= 12 ? "PM" : "AM";
+    
+    // Convert 24-hour format to 12-hour format for comparison
+    currentHour = currentHour % 12;
+    currentHour = currentHour === 0 ? 12 : currentHour; // Handle the case for 12 PM and 12 AM
+    
+    // Get the current day of the week
+    const currentDay = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+    
+    // Check if the current time matches the given time array
+    const timeMatches = (
+      String(currentHour) === time[0] &&
+      String(currentMinute).padStart(2, "0") === time[1] &&
+      currentPeriod === time[2]
+    );
+  
+    // Check if the current day matches the given days array
+    const dayMatches = days.includes(currentDay);
+  
+    // Return whether both conditions are true
+    return timeMatches && dayMatches;
+  }
 
   const handleTaskCheck = (habit, taskId) => {
     setCheckedTasks((prev) => ({
