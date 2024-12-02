@@ -166,7 +166,7 @@ function Dashboard() {
     return new Date().toLocaleDateString(undefined, options);
   };
 
-  const saveHabitTitle = async (oldTitle) => { 
+  const saveHabitTitle = async (oldTitle) => {
     try {
       const response = await fetch(`http://localhost:5050/record/update-habit-title/${userData.username}`, {
         method: "PATCH",
@@ -176,12 +176,15 @@ function Dashboard() {
   
       if (response.ok) {
         console.log("Habit title updated successfully");
-        // Update the habits array
+        // Update habits in localStorage
+        const updatedUser = { ...userData, habits: habits.map(habit => habit === oldTitle ? newHabitTitle : habit) };
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+  
         setHabits((prevHabits) =>
           prevHabits.map((habit) => (habit === oldTitle ? newHabitTitle : habit))
         );
-        setEditingHabit(null); // Exit edit mode
-        getTasks(userData.username); // Refresh tasks to show changes
+        setEditingHabit(null);
+        getTasks(userData.username);
       } else {
         console.error("Error updating habit title");
       }
@@ -189,6 +192,7 @@ function Dashboard() {
       console.error("Error updating habit title:", error);
     }
   };
+  
 
   const handleProfile = () => {
     navigate("/profile");
