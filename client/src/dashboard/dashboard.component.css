@@ -79,7 +79,8 @@ body {
 
 .add-habit-button {
     display: block;
-    margin: auto; 
+    margin: auto;
+    margin-bottom: 10px; 
     font-size: large;
     background-color: #C9E4DE;
     border: 1.5px solid #0b5d34; 
