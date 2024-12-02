@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./settings.component.css";
-//import TimePicker from 'react-time-picker';
 
 function Settings({ onClose, userData, onUpdateUserData }) {
   const [dailyReminderTime, setDailyReminderTime] = useState(
@@ -71,8 +70,7 @@ function Settings({ onClose, userData, onUpdateUserData }) {
           </div>
 
           <div className="settings-content">
-            
-          <div className="Daily-Reminder-Time">
+            <div className="Daily-Reminder-Time">
               <label>Daily Reminder Time</label>
               <div className="time-display" onClick={handleTimeChange}>
                 <label className="hour-display">
@@ -85,41 +83,6 @@ function Settings({ onClose, userData, onUpdateUserData }) {
                 <label className="AM-or-PM"> {dailyReminderTime[2]}</label>
               </div>
             </div>
-            
-            {/*
-            IMPORT REACT TIME PICKER
-            <div className="Daily-Reminder-Time">
-              <label>Daily Reminder Time</label>
-              <div className="time-display">
-
-              <TimePicker
-                onChange={handleTimeChange}
-                value={`${dailyReminderTime[0]}:${dailyReminderTime[1]} ${dailyReminderTime[2]}`}
-                format="hh:mm a" // 12-hour format with AM/PM
-                />
-              </div>
-            </div>
-            */}
-            {/* 
-            IMPORT npm install @mui/x-date-pickers
-            <div className="Daily-Reminder-Time">
-                <label>Daily Reminder Time</label>
-                 
-                <TextField
-                    label="Choose Time"
-                    type="time"
-                    value={String(dailyReminderTime[0]).padStart(2, "0") + ":" + String(dailyReminderTime[1]).padStart(2, "0")}
-                    InputLabelProps={{
-                    shrink: true,
-                    }}
-                    inputProps={{
-                    step: 300, // 5 minutes
-                    }}
-                    onChange={handleTimeChange}
-                />
-                
-            </div>
-            */}
             <div className="Days-to-Remind">
               <div>Days to Remind</div>
               <div className="remind-days-buttons">

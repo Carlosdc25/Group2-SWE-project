@@ -56,6 +56,10 @@ function Dashboard() {
     }));
   };
 
+  const handleUserDataUpdate = (updatedData) => {
+    setUserData((prevData) => ({ ...prevData, ...updatedData }));
+  };
+
 
   const fetchHabits = async (username) => {
     try {
@@ -341,7 +345,7 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {isSettingsOpen && <SettingsDialog onClose={toggleSettings} />}
+      {isSettingsOpen && userData && <SettingsDialog onClose={toggleSettings} userData={userData} onUpdateUserData={handleUserDataUpdate}/>}
     </div>
   );
 }
