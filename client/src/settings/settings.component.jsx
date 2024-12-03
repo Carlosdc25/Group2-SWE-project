@@ -59,20 +59,6 @@ function Settings({ onClose, userData, onUpdateUserData }) {
         //handleReminderChange(updatedDailyReminderTime=updatedTime);
         return updatedTime;
       });
-      /*
-        onUpdateUserData({
-            dailyReminderTime: [hour, minute, period] || dailyReminderTime,
-            //daysToRemind: updatedDaysToRemind || daysToRemind,
-          });
-        setUserData((prevData) => {
-          const updatedData = {
-            ...prevData,
-            dailyReminderTime: timeArray,
-          };
-          handleReminderChange(updatedData.dailyReminderTime); // Use updated state
-          return updatedData;
-        });
-      }; */
     }
   };
 

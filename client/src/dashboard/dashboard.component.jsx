@@ -57,8 +57,7 @@ function Dashboard() {
         const time = userData.dailyReminderTime;
         const days = userData.daysToRemind;
         console.log("stored" + time + " " + days);
-        //const time = ["2", "56", "AM"];
-        //const days = ["Monday", "Tuesday"];
+
         //console.log(isCurrentDateAndTimeMatching(time, days))
         if (isCurrentDateAndTimeMatching(time, days)) {
           registerPushNotifications();
@@ -80,8 +79,6 @@ function Dashboard() {
     const currentPeriod = currentHour >= 12 ? "PM" : "AM";
 
     // Convert 24-hour format to 12-hour format for comparison
-    //currentHour = currentHour % 12;
-    //currentHour = currentHour === 0 ? 12 : currentHour; // Handle the case for 12 PM and 12 AM
 
     // Get the current day of the week
     const currentDay = currentDate.toLocaleDateString("en-US", {
@@ -89,19 +86,14 @@ function Dashboard() {
     });
 
     // Check if the current time matches the given time array
-    //console.log(" currentHour " + String(currentHour) + " time[0] " + time[0]);
-    //console.log(" currentMin " + String(currentMinute).padStart(2, "0") + " time[1] " + time[1]);
-    //console.log(" currentPeriod " + " time[2] " + time[2]);
-    //console.log(currentMinute === time[1] );
     const timeMatches =
       currentHour === time[0] &&
       currentMinute === time[1] 
-      //&&
-      //currentPeriod === time[2];
+
 
     // Check if the current day matches the given days array
     const dayMatches = days.includes(currentDay);
-    //console.log("timeMatches" + timeMatches + " dayMatches" + dayMatches);
+
     // Return whether both conditions are true
     return timeMatches && dayMatches;
   }
