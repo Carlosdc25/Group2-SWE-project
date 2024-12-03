@@ -436,11 +436,15 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {isSettingsOpen && userData && (
+       {isSettingsOpen && userData && (
         <SettingsDialog
           onClose={toggleSettings}
           userData={userData}
-          onUpdateUserData={handleUserDataUpdate}
+          onUpdateUserData={(updatedData) => {
+            const newUserData = { ...userData, ...updatedData };
+            setUserData(newUserData); // Update local state
+            localStorage.setItem("user", JSON.stringify(newUserData)); // Persist in localStorage
+          }}
         />
       )}
     </div>
