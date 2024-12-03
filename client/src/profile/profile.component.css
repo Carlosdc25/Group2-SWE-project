@@ -78,30 +78,31 @@ body {
  .habit3 { background-color: #FAEDCB; }
  .habit4 { background-color: #F2C6DE; }
  
- 
- /* Reminder time and days styling */
- .reminder-time {
-    width: 100%;
-    height: 50px;
-    background-color: #bbdefb;
-    border-radius: 8px;
- }
- 
- 
- .days {
-    display: flex;
-    flex-wrap: wrap;
- }
- 
- 
- .day-box {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
- }
- 
+.reminder-time {
+   height: 50px;
+   background-color: #bbdefb;
+   border-radius: 8px;
+   font-size: 1em;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+}
+.days {
+   flex-wrap: wrap;
+   align-items: center;
+   display: flex;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+}
+.day-box {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
  
  .day1, .day2, .day3, .day4, .day5, .day6, .day7 {
     background-color: #e1bee7;
@@ -124,6 +125,7 @@ body {
    color: white;
    font-size: 16px;
    padding: 10px 20px;
+   margin-bottom: 20px;
    border: none;
    border-radius: 8px; /* Rounded corners to match other elements */
    cursor: pointer;

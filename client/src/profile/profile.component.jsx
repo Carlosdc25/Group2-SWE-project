@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./profile.component.css";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 
 const Profile = () => {
   const navigate = useNavigate();
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [habits, setHabits] = useState([]); // Dynamic habits state
+  const { userData } = useContext(UserContext); // Consume userData from context
+  const [habits, setHabits] = useState([]);
 
   const handleDashboard = () => {
     navigate("/dashboard");
@@ -69,16 +70,25 @@ const Profile = () => {
           <div className="reminders box">
             <h2>Reminders</h2>
             <p>You will receive reminders at:</p>
-            <div className="reminder-time"></div>
+            <div className="reminder-time">
+              {userData?.dailyReminderTime
+                ? (() => {
+                    const [hour, minute, period] = userData.dailyReminderTime;
+                    const formattedHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
+                    const formattedMinute = minute.toString().padStart(2, "0");
+                    return `${formattedHour}:${formattedMinute} ${period}`;
+                  })()
+                : "No reminder time set"}
+            </div>
             <p>on the following days:</p>
             <div className="days">
-              <div className="day-box day1"></div>
-              <div className="day-box day2"></div>
-              <div className="day-box day3"></div>
-              <div className="day-box day4"></div>
-              <div className="day-box day5"></div>
-              <div className="day-box day6"></div>
-              <div className="day-box day7"></div>
+              {userData?.daysToRemind?.length > 0
+                ? userData.daysToRemind.map((day, index) => (
+                    <div key={index} className={`day-box day${index + 1}`}>
+                      {day}
+                    </div>
+                  ))
+                : "No reminder days set"}
             </div>
           </div>
         </div>
@@ -89,8 +99,7 @@ const Profile = () => {
           Logout
         </button>
       </div>
-
-      {isSettingsOpen && <SettingsDialog onClose={toggleSettings} />}
+      <div>If your account data does not match your request, please refresh the page!</div>
     </div>
   );
 };
